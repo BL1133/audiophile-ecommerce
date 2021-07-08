@@ -1,0 +1,11 @@
+@import '../../styles/config/variables';
+
+.list {
+  display: flex;
+}
+.item {
+  font-size: 13px;
+  color: $color-neutral-grey;
+  margin-right: 3.2rem;
+  text-transform: uppercase;
+}

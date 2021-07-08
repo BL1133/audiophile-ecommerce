@@ -1,0 +1,13 @@
+@import '../../../styles/config/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-neutral-black;
+  background: url('../../../assets/home/desktop/image-hero.jpg');
+  background-position: bottom;
+  margin: 0 -16.5rem;
+  padding: 0 16.5rem;
+  height: 63rem;
+}

@@ -1,0 +1,23 @@
+@import '../../styles/config/variables';
+
+.content {
+  width: 50%;
+}
+.new-product {
+  margin-bottom: 2.4rem;
+}
+.title {
+  margin-bottom: 2.4rem;
+
+  &--light {
+    color: $color-neutral-white;
+  }
+}
+.description {
+  margin-bottom: 4rem;
+  width: 80%;
+
+  &--light {
+    color: $color-neutral-white;
+  }
+}
