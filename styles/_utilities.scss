@@ -8,4 +8,17 @@
     margin-left: 4rem;
     margin-right: 4rem;
   }
+  @include respond(phone) {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+  }
+}
+.u-margin-b-s {
+  margin-bottom: 12rem;
+}
+.u-margin-b-m {
+  margin-bottom: 16.6rem;
+}
+.u-margin-b-l {
+  margin-bottom: 20rem;
 }
