@@ -1,13 +1,47 @@
 @import '../../../styles/config/variables';
+@import '../../../styles//config//mixins';
 
 .container {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   background-color: $color-neutral-black;
-  background: url('../../../assets/home/desktop/image-hero.jpg');
-  background-position: bottom;
   margin: 0 -16.5rem;
   padding: 0 16.5rem;
   height: 63rem;
+
+  &::before {
+    content: '';
+    background-image: url('../../../assets/home/desktop/image-hero.jpg');
+    background-size: cover;
+    background-position: bottom;
+    // z-index: 1;
+    position: absolute;
+    top: -17%;
+    left: 0;
+    width: 100%;
+    height: 117%;
+
+    @include respond(tab-port) {
+      background-image: url('../../../assets/home/tablet/image-header.jpg');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include respond(tab-port) {
+    margin: 0 -4rem;
+    padding: 0 4rem;
+  }
+}
+.content {
+  z-index: 1;
+}
+.button {
+  @include respond(tab-port) {
+    display: flex;
+    justify-content: center;
+  }
 }

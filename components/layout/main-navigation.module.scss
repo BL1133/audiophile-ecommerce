@@ -1,18 +1,59 @@
 @import '../../styles/config/variables';
+@import '../../styles/config/mixins';
 
 .container {
-  background: url('../../assets/home/desktop/image-hero.jpg');
   background-color: $color-neutral-black;
+
+  @include respond(tab-port) {
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   padding: 3.2rem 0;
+  z-index: 100;
+  position: relative;
 
-  &--container {
-    border-bottom: 1px solid #525050;
+  @include respond(tab-port) {
+    justify-content: initial;
+  }
+  @include respond(phone) {
+    justify-content: space-between;
   }
 }
-.line {
+
+.menu {
+  display: none;
+
+  & > svg {
+    display: block;
+  }
+
+  @include respond(tab-port) {
+    display: initial;
+    margin-right: 4.2rem;
+  }
+  @include respond(phone) {
+    margin-right: initial;
+  }
+}
+.logo {
+  & > svg {
+    align-self: center;
+    display: block;
+  }
+
+  @include respond(tab-port) {
+    margin-right: auto;
+  }
+  @include respond(phone) {
+    margin-right: initial;
+    margin: auto;
+  }
+}
+.cart {
+  & > svg {
+    display: block;
+  }
 }

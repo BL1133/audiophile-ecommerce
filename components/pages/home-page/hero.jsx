@@ -6,14 +6,19 @@ import SeeProduct from '../../elements/buttons/see-product';
 function Hero() {
   return (
     <div className={classes.container}>
-      <ProductInfo
-        newProduct={true}
-        title="XX99 Mark II Headphones"
-        description="Experience natural, lifelike audio and exceptional build quality made
+      <div className={classes.content}>
+        <ProductInfo
+          newProduct={true}
+          title="XX99 Mark II Headphone"
+          description="Experience natural, lifelike audio and exceptional build quality made
         for the passionate music enthusiast."
-        light={true}
-      />
-      <SeeProduct orange={true} url="/product/xx99" />
+          light={true}
+          centered={true}
+        />
+        <div className={classes.button}>
+          <SeeProduct orange={true} url="/product/xx99" />
+        </div>
+      </div>
     </div>
   );
 }

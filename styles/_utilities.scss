@@ -1,4 +1,11 @@
+@import './config/mixins';
+
 .u-margin-lr {
   margin-left: 16.5rem;
   margin-right: 16.5rem;
+
+  @include respond(tab-port) {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }

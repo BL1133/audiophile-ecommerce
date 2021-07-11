@@ -1,16 +1,58 @@
 @import '../../styles/config/variables';
+@import '../../styles/config/mixins';
 
 .content {
   width: 50%;
+
+  @include respond(tab-port) {
+    &--centered {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }
 .new-product {
   margin-bottom: 2.4rem;
+
+  @include respond(tab-port) {
+    &--centered {
+      width: 30%;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  @include respond(phone) {
+    &--centered {
+      width: 40%;
+    }
+  }
+  @media only screen and (max-width: 370px) {
+    &--centered {
+      width: 50%;
+    }
+  }
 }
 .title {
   margin-bottom: 2.4rem;
 
   &--light {
     color: $color-neutral-white;
+  }
+  @include respond(tab-port) {
+    &--centered {
+      text-align: center;
+      align-self: center;
+      width: 70%;
+    }
+  }
+  @include respond(phone) {
+    &--centered {
+      font-size: 36px;
+      width: 100%;
+      line-height: 40px;
+    }
   }
 }
 .description {
@@ -19,5 +61,17 @@
 
   &--light {
     color: $color-neutral-white;
+  }
+  @include respond(tab-port) {
+    &--centered {
+      text-align: center;
+      width: 40%;
+      align-self: center;
+    }
+  }
+  @include respond(phone) {
+    &--centered {
+      width: 70%;
+    }
   }
 }
