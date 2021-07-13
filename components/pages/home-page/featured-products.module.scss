@@ -1,0 +1,121 @@
+@import '../../../styles/config/variables';
+@import '../../../styles/config/mixins';
+
+.container {
+  position: relative;
+  width: 100%;
+}
+.featured {
+  &--primary {
+    position: relative;
+    background-color: $color-primary-orange;
+    height: 56rem;
+    overflow: hidden;
+    z-index: -1;
+
+    @include respond(tab-port) {
+      height: 72rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__content,
+    &__title,
+    &__text {
+      color: $color-neutral-white;
+
+      @include respond(tab-port) {
+        text-align: center;
+      }
+    }
+    &__content {
+      width: 35%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-right: 7%;
+
+      @include respond(tab-land) {
+        width: 30%;
+      }
+      @include respond(tab-port) {
+        width: initial;
+        position: initial;
+        right: initial;
+        top: initial;
+        transform: initial;
+        margin-right: initial;
+      }
+    }
+    &__title {
+      margin-bottom: 2.4rem;
+
+      @include respond(tab-port) {
+        line-height: 43px !important;
+      }
+    }
+    &__text {
+      margin-bottom: 4.6rem;
+      width: 80%;
+
+      @include respond(tab-land) {
+        width: 100%;
+      }
+      @include respond(tab-port) {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 4rem;
+      }
+      @include respond(phone) {
+        width: 80%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+.img-wrapper {
+  position: absolute;
+  bottom: -17px;
+  left: 12%;
+  width: 38rem;
+  min-width: 30rem;
+  transform: skewX(2deg);
+  z-index: -1;
+
+  @include respond(tab-port) {
+    position: initial;
+    bottom: initial;
+    left: initial;
+    transform: initial;
+    min-width: initial;
+    max-width: 19.7rem;
+    margin-bottom: 6.4rem;
+  }
+}
+
+.circles {
+  &::after {
+    content: url('../../../assets/home/desktop/pattern-circles.svg');
+    position: absolute;
+    left: -75%;
+    top: -30%;
+
+    @include respond(tab-port) {
+      transform: scale(90%) translate(-50%, -50%);
+      transform-origin: left;
+      left: initial;
+      top: 20%;
+      left: 50%;
+      // margin: 0 auto;
+      // width: 100%;
+      // height: 100%;
+    }
+    @include respond(phone) {
+      transform: scale(70%) translate(-50%, -50%);
+      top: -2%;
+    }
+  }
+}

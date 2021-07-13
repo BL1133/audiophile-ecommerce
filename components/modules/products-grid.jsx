@@ -73,8 +73,8 @@ export default function ProductsGrid() {
             <div className={classes['image-wrapper']}>
               <Image
                 src={Earphones}
-                width={170}
-                height={160}
+                width={230}
+                height={200}
                 layout="responsive"
                 alt="earphones"
               />
