@@ -2,13 +2,14 @@ import React from 'react';
 import classes from './featured-products.module.scss';
 import Image from 'next/image';
 
-import Button from '../../elements/buttons/see-product';
+import SeeProduct from '../../elements/buttons/see-product';
 import FeaturedImage from '../../../assets/home/desktop/image-speaker-zx9.png';
 import Circles from '../../../assets/home/desktop/pattern-circles.svg';
 
 export default function FeaturedProducts() {
   return (
     <div className={classes.container}>
+      {/* Primary */}
       <div className={`${classes['featured--primary']} u-border-r`}>
         <div className={classes['img-wrapper']}>
           <div className={classes.circles}></div>
@@ -27,7 +28,22 @@ export default function FeaturedProducts() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Button black={true} url="/products/speakers/zx9" />
+          <SeeProduct black={true} url="/products/speakers/zx9" />
+        </div>
+      </div>
+      {/* Secondary */}
+      <div className={`${classes.secondary} u-border-r`}>
+        <div className={classes.secondary__content}>
+          <h4>zx7 speaker</h4>
+          <SeeProduct clear={true} url="/products/speakers/zx7" />
+        </div>
+      </div>
+      {/* Tertiary */}
+      <div className={`${classes.tertiary} u-border-r`}>
+        <div className={`${classes.tertiary__img} u-border-r`}></div>
+        <div className={`${classes.tertiary__content} u-border-r`}>
+          <h4>yx1 earphones</h4>
+          <SeeProduct clear={true} url="/products/earphones/yx1" />
         </div>
       </div>
     </div>
