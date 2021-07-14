@@ -1,0 +1,73 @@
+@import '../../styles/config/mixins';
+
+.container {
+  display: flex;
+  width: 100%;
+
+  @include respond(tab-land) {
+    flex-direction: column-reverse;
+  }
+  @include respond(phone) {
+    height: initial;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-right: 3.2rem;
+
+  @include respond(tab-land) {
+    width: 100%;
+    margin-right: initial;
+    align-items: center;
+
+    & > h2 {
+      width: 80%;
+      text-align: center;
+    }
+  }
+  @include respond(phone) {
+    & > h2 {
+      width: 100%;
+      font-size: 3.5rem;
+    }
+  }
+
+  &__highlight {
+    color: #e5783c;
+  }
+  &__text {
+    margin-top: 3.2rem;
+    width: 85%;
+
+    @include respond(tab-land) {
+      text-align: center;
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
+.image {
+  background-image: url(../../assets/shared/desktop/image-best-gear.jpg);
+  width: 50%;
+  height: 58.8rem;
+  background-size: cover;
+  background-position: center;
+
+  @include respond(tab-land) {
+    width: 100%;
+    height: 63.3rem;
+    height: 30rem;
+    margin-bottom: 6.3rem;
+    background-image: url(../../assets/shared/tablet/image-best-gear.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @include respond(phone) {
+    height: 30rem;
+    margin-bottom: 4rem;
+  }
+}

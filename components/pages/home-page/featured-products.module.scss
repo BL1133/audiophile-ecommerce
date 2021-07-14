@@ -55,7 +55,7 @@
       margin-bottom: 2.4rem;
 
       @include respond(tab-port) {
-        line-height: 43px !important;
+        line-height: 55px !important;
       }
       @include respond(phone) {
         font-size: 4.5rem;

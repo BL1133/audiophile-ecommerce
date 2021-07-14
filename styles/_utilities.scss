@@ -4,6 +4,11 @@
   margin-left: 16.5rem;
   margin-right: 16.5rem;
 
+  @include respond(tab-land) {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
   @include respond(tab-port) {
     margin-left: 4rem;
     margin-right: 4rem;
@@ -21,6 +26,10 @@
 }
 .u-margin-b-l {
   margin-bottom: 20rem;
+
+  @include respond(tab-land) {
+    margin-bottom: 9.6rem;
+  }
 }
 .u-border-r {
   border-radius: 8px;

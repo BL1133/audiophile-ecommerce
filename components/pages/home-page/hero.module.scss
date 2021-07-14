@@ -30,7 +30,10 @@
       background-repeat: no-repeat;
     }
   }
-
+  @include respond(tab-land) {
+    margin: 0 -8rem;
+    padding: 0 8rem;
+  }
   @include respond(tab-port) {
     margin: 0 -4rem;
     padding: 0 4rem;
