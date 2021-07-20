@@ -2,10 +2,7 @@
 @import '../../styles/config/mixins';
 
 .container {
-  background-color: $color-neutral-black;
-
-  @include respond(tab-port) {
-  }
+  background-color: $color-neutral-light-black;
 }
 
 .header {

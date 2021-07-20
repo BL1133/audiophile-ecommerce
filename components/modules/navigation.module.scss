@@ -7,10 +7,28 @@
   @include respond(tab-port) {
     display: none;
   }
+  &--footer {
+    display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+
+      & > *:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
 }
 .item {
   font-size: 13px;
   color: $color-neutral-grey;
   margin-right: 3.2rem;
   text-transform: uppercase;
+
+  &--footer {
+    @include respond(phone) {
+      margin: 0 auto;
+    }
+  }
 }

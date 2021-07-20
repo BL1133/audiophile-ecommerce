@@ -9,7 +9,7 @@ function Layout(props) {
         <MainNavigation />
       </header>
       <main className="u-margin-lr">{props.children}</main>
-      <footer className="u-margin-lr">
+      <footer className="u-bgc-b">
         <Footer />
       </footer>
     </Fragment>
