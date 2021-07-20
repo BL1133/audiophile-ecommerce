@@ -1,9 +1,6 @@
 import React from 'react';
 import classes from './footer.module.scss';
 import Navigation from '../../components/modules/navigation';
-import Facebook from '../../assets/shared/desktop/icon-facebook.svg';
-// import Facebook from '../../assets/shared/desktop/icon-facebook.svg';
-// import Facebook from '../../assets/shared/desktop/icon-facebook.svg';
 
 export default function footer() {
   return (

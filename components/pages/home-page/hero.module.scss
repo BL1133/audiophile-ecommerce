@@ -6,7 +6,7 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
-  background-color: $color-neutral-black;
+  background-color: $color-neutral-light-black;
   margin: 0 -16.5rem;
   padding: 0 16.5rem;
   height: 63rem;
@@ -29,6 +29,12 @@
       background-position: 50% 50%;
       background-repeat: no-repeat;
     }
+    @include respond(phone) {
+      background-image: url('../../../assets/home/mobile/image-header.jpg');
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
   }
   @include respond(tab-land) {
     margin: 0 -8rem;
@@ -37,6 +43,10 @@
   @include respond(tab-port) {
     margin: 0 -4rem;
     padding: 0 4rem;
+  }
+  @include respond(phone) {
+    margin: 0 -2.4rem;
+    padding: 0 2.4rem;
   }
 }
 .content {

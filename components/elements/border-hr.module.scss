@@ -10,7 +10,7 @@
   z-index: 1;
 
   @include respond(phone) {
-    width: calc(100% + 8rem);
-    transform: translateX(-4rem);
+    width: calc(100% + 4.8rem);
+    transform: translateX(-2.4rem);
   }
 }
