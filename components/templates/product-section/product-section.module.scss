@@ -1,0 +1,31 @@
+@import '../../../styles/config/variables';
+@import '../../../styles/config/mixins';
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24rem;
+  background-color: $color-neutral-black;
+  margin: 0 -16.5rem;
+  padding: 0 16.5rem;
+
+  @include respond(tab-land) {
+    margin: 0 -8rem;
+    padding: 0 8rem;
+  }
+  @include respond(tab-port) {
+    margin: 0 -4rem;
+    padding: 0 4rem;
+  }
+  @include respond(phone) {
+    margin: 0 -2.4rem;
+    padding: 0 2.4rem;
+  }
+}
+.title {
+  color: $color-neutral-white;
+}
+.products {
+  margin-top: 16rem;
+}

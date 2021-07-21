@@ -1,6 +1,5 @@
 import classes from './hero.module.scss';
-import Image from 'next/image';
-import ProductInfo from '../../modules/product-info';
+import ProductInfo from '../../pages/home-page/product-info';
 import SeeProduct from '../../elements/buttons/see-product';
 
 function Hero() {
