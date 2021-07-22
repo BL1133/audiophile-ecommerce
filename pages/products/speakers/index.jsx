@@ -6,16 +6,28 @@ import ProductInfo from '../../../components/modules/product-info';
 import SeeProduct from '../../../components/elements/buttons/see-product';
 import ProductWrapper from '../../../components/modules/product-wrapper';
 
-import ZX9 from '../../../assets/category-speakers/desktop/image-zx9.jpg';
-import ZX7 from '../../../assets/category-speakers/desktop/image-zx7.jpg';
+import ZX9d from '../../../assets/category-speakers/desktop/image-zx9.jpg';
+import ZX9t from '../../../assets/category-speakers/tablet/image-zx9.jpg';
+import ZX9m from '../../../assets/category-speakers/mobile/image-zx9.jpg';
+import ZX7d from '../../../assets/category-speakers/desktop/image-zx7.jpg';
+import ZX7t from '../../../assets/category-speakers/tablet/image-zx7.jpg';
+import ZX7m from '../../../assets/category-speakers/mobile/image-zx7.jpg';
 
 export default function SpeakersSection() {
   return (
     <ProductSection title="Speakers">
       <section className={`${classes.section} u-margin-b-m`}>
         <ProductWrapper>
-          <Image src={ZX9} width={540} height={560} className={classes.image} />
-          <div className={classes.product__info}>
+          <div className={classes['image--desktop']}>
+            <Image src={ZX9d} width={540} height={560} />
+          </div>
+          <div className={classes['image--tablet']}>
+            <Image src={ZX9t} width={1378} height={700} />
+          </div>
+          <div className={classes['image--mobile']}>
+            <Image src={ZX9m} width={654} height={704} />
+          </div>
+          <div className={classes.product}>
             <ProductInfo
               newProduct={true}
               title="ZX9 Speaker"
@@ -27,8 +39,8 @@ export default function SpeakersSection() {
           </div>
         </ProductWrapper>
         {/* --------------------------------- */}
-        <ProductWrapper>
-          <div className={classes.product__info}>
+        <ProductWrapper reverse={true}>
+          <div className={classes.product}>
             <ProductInfo
               newProduct={false}
               title="ZX7 Speaker"
@@ -38,7 +50,15 @@ export default function SpeakersSection() {
               <SeeProduct orange={true} url="/product/zx7" />
             </div>
           </div>
-          <Image src={ZX7} width={540} height={560} className={classes.image} />
+          <div className={classes['image--desktop']}>
+            <Image src={ZX7d} width={540} height={560} />
+          </div>
+          <div className={classes['image--tablet']}>
+            <Image src={ZX7t} width={1378} height={700} />
+          </div>
+          <div className={classes['image--mobile']}>
+            <Image src={ZX7m} width={654} height={704} />
+          </div>
         </ProductWrapper>
       </section>
     </ProductSection>

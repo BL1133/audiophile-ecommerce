@@ -3,11 +3,9 @@
 
 .content {
   @include respond(tab-port) {
-    &--centered {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .new-product {
@@ -15,10 +13,8 @@
   color: $color-primary-orange;
 
   @include respond(tab-port) {
-    &--centered {
-      text-align: center;
-      margin: auto;
-    }
+    text-align: center;
+    margin: auto;
   }
 }
 .title {
@@ -27,38 +23,28 @@
   &--light {
     color: $color-neutral-white;
   }
+
   @include respond(tab-port) {
-    &--centered {
-      text-align: center;
-      align-self: center;
-      width: 70%;
-    }
+    text-align: center;
+    align-self: center;
+    width: 70%;
   }
   @include respond(phone) {
-    &--centered {
-      font-size: 36px;
-      width: 100%;
-      line-height: 40px;
-    }
+    font-size: 36px;
+    width: 100%;
+    line-height: 40px;
   }
 }
 .description {
   margin-bottom: 4rem;
-  width: 80%;
 
   &--light {
     color: $color-neutral-white;
   }
   @include respond(tab-port) {
-    &--centered {
-      text-align: center;
-      width: 40%;
-      align-self: center;
-    }
-  }
-  @include respond(phone) {
-    &--centered {
-      width: 70%;
-    }
+    text-align: center;
+    width: 90%;
+    align-self: center;
+    margin-bottom: 2.4rem;
   }
 }
