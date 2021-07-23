@@ -38,3 +38,21 @@ ORDER: Base + typography > general layout + grid > page layout > components
     } //1800
   }
 }
+
+@mixin CategoryPage() {
+  .product {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    @include respond(tab-port) {
+      width: initial;
+    }
+  }
+
+  .button {
+    @include respond(tab-port) {
+      align-self: center;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import classes from './index.module.scss';
 import ProductSection from '../../../components/templates/product-section/product-section';
-import Image from 'next/image';
 
 import ProductInfo from '../../../components/modules/product-info';
 import SeeProduct from '../../../components/elements/buttons/see-product';
