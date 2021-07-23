@@ -29,7 +29,10 @@ export default function HeadphonesSection() {
               description="The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/product/xx99-mark-two" />
+              <SeeProduct
+                orange={true}
+                url="/products/headphones/xx99-mark-two"
+              />
             </div>
           </div>
         </ProductWrapper>
@@ -42,7 +45,10 @@ export default function HeadphonesSection() {
               description="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/product/xx99-mark-one" />
+              <SeeProduct
+                orange={true}
+                url="/products/headphones/xx99-mark-one"
+              />
             </div>
           </div>
           <ImageLoader desktop={XX99mk1d} tablet={XX99mk1t} mobile={XX99mk1m} />
@@ -57,7 +63,7 @@ export default function HeadphonesSection() {
               description="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/product/xx59" />
+              <SeeProduct orange={true} url="/products/headphones/xx59" />
             </div>
           </div>
         </ProductWrapper>

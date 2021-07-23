@@ -23,7 +23,7 @@ export default function EarphonesSection() {
               description="Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/product/yx1" />
+              <SeeProduct orange={true} url="/products/earphones/yx1" />
             </div>
           </div>
         </ProductWrapper>

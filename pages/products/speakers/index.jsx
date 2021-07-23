@@ -26,7 +26,7 @@ export default function SpeakersSection() {
               description="Upgrade your sound system with the all new ZX9 active speaker. It's a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/product/zx9" />
+              <SeeProduct orange={true} url="/products/speakers/zx9" />
             </div>
           </div>
         </ProductWrapper>
@@ -39,7 +39,7 @@ export default function SpeakersSection() {
               description="Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/product/zx7" />
+              <SeeProduct orange={true} url="/products/speakers/zx7" />
             </div>
           </div>
           <ImageLoader desktop={ZX7d} tablet={ZX7t} mobile={ZX7m} />
