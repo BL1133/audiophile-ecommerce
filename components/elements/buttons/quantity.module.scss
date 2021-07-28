@@ -1,0 +1,15 @@
+@import '../../../styles/config/variables';
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  height: 48px;
+  background-color: $color-neutral-grey;
+}
+
+.quantity {
+  color: $color-neutral-light-grey;
+  font-size: 17px;
+}

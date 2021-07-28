@@ -38,7 +38,7 @@
   }
 }
 .description {
-  color: $color-neutral-dark-grey;
+  color: $color-neutral-light-grey;
   width: 45%;
   margin-top: 3.6rem;
 
@@ -65,7 +65,7 @@
   }
 }
 .copyright {
-  color: $color-neutral-dark-grey;
+  color: $color-neutral-light-grey;
   margin-top: 5.6rem;
 
   @include respond(tab-port) {

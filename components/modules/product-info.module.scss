@@ -36,7 +36,9 @@
   }
 }
 .description {
+  width: 85%;
   margin-bottom: 4rem;
+  color: $color-neutral-dark-grey;
 
   &--light {
     color: $color-neutral-white;
