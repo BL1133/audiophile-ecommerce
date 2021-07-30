@@ -6,8 +6,8 @@ import Quantity from '../../elements/buttons/quantity';
 
 export default function Product(props) {
   return (
-    <div className={`${classes.container} u-margin-b-l`}>
-      <div className={`${classes.product__container} u-margin-b-l`}>
+    <div className={`${classes.container} u-margin-b-m`}>
+      <div className={`${classes.product__container} u-margin-b-m`}>
         <div className={classes.product__Image}>
           <ImageLoader
             desktop={props.desktop}

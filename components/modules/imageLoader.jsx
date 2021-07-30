@@ -31,56 +31,110 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
       height: '704',
     },
   };
-  return (
-    <Fragment>
-      <div className={classes.desktop}>
-        <Image
-          src={desktop}
-          width={
-            component === 'product'
-              ? productPage.desktop.width
-              : categoryPage.desktop.width
-          }
-          height={
-            component === 'product'
-              ? productPage.desktop.height
-              : categoryPage.desktop.height
-          }
-          loading="lazy"
-        />
-      </div>
-      <div className={classes.tablet}>
-        <Image
-          src={tablet}
-          width={
-            component === 'product'
-              ? productPage.tablet.width
-              : categoryPage.tablet.width
-          }
-          height={
-            component === 'product'
-              ? productPage.tablet.height
-              : categoryPage.tablet.height
-          }
-          loading="lazy"
-        />
-      </div>
-      <div className={classes.mobile}>
-        <Image
-          src={mobile}
-          width={
-            component === 'product'
-              ? productPage.mobile.width
-              : categoryPage.mobile.width
-          }
-          height={
-            component === 'product'
-              ? productPage.mobile.height
-              : categoryPage.mobile.height
-          }
-          loading="lazy"
-        />
-      </div>
-    </Fragment>
-  );
+  const suggestionsPage = {
+    desktop: {
+      width: '350',
+      height: '318',
+    },
+    tablet: {
+      width: '223',
+      height: '318',
+    },
+    mobile: {
+      width: '327',
+      height: '120',
+    },
+  };
+
+  switch (component) {
+    case 'product':
+      return (
+        <Fragment>
+          <div className={classes.desktop}>
+            <Image
+              src={desktop}
+              width={productPage.desktop.width}
+              height={productPage.desktop.height}
+              loading="lazy"
+            />
+          </div>
+          <div className={classes.tablet}>
+            <Image
+              src={tablet}
+              width={productPage.tablet.width}
+              height={productPage.tablet.height}
+              loading="lazy"
+            />
+          </div>
+          <div className={classes.mobile}>
+            <Image
+              src={mobile}
+              width={productPage.mobile.width}
+              height={productPage.mobile.height}
+              loading="lazy"
+            />
+          </div>
+        </Fragment>
+      );
+      break;
+    case 'product-category':
+      return (
+        <Fragment>
+          <div className={classes.desktop}>
+            <Image
+              src={desktop}
+              width={categoryPage.desktop.width}
+              height={categoryPage.desktop.height}
+              loading="lazy"
+            />
+          </div>
+          <div className={classes.tablet}>
+            <Image
+              src={tablet}
+              width={categoryPage.tablet.width}
+              height={categoryPage.tablet.height}
+              loading="lazy"
+            />
+          </div>
+          <div className={classes.mobile}>
+            <Image
+              src={mobile}
+              width={categoryPage.mobile.width}
+              height={categoryPage.mobile.height}
+              loading="lazy"
+            />
+          </div>
+        </Fragment>
+      );
+      break;
+    case 'suggestions':
+      return (
+        <Fragment>
+          <div className={classes.desktop}>
+            <Image
+              src={desktop}
+              width={suggestionsPage.desktop.width}
+              height={suggestionsPage.desktop.height}
+              loading="lazy"
+            />
+          </div>
+          <div className={classes.tablet}>
+            <Image
+              src={tablet}
+              width={suggestionsPage.tablet.width}
+              height={suggestionsPage.tablet.height}
+              loading="lazy"
+            />
+          </div>
+          <div className={classes.mobile}>
+            <Image
+              src={mobile}
+              width={suggestionsPage.mobile.width}
+              height={suggestionsPage.mobile.height}
+              loading="lazy"
+            />
+          </div>
+        </Fragment>
+      );
+  }
 }

@@ -15,9 +15,15 @@ import img1 from '../../../../assets/product-xx99-mark-two-headphones/desktop/im
 import img2 from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg';
 import img3 from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg';
 // Suggestions
-import product1 from '../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg';
-import product2 from '../../../../assets/shared/desktop/image-xx59-headphones.jpg';
-import product3 from '../../../../assets/shared/desktop/image-zx9-speaker.jpg';
+import product1_d from '../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg';
+import product1_t from '../../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg';
+import product1_m from '../../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg';
+import product2_d from '../../../../assets/shared/desktop/image-xx59-headphones.jpg';
+import product2_t from '../../../../assets/shared/tablet/image-xx59-headphones.jpg';
+import product2_m from '../../../../assets/shared/mobile/image-xx59-headphones.jpg';
+import product3_d from '../../../../assets/shared/desktop/image-zx9-speaker.jpg';
+import product3_t from '../../../../assets/shared/tablet/image-zx9-speaker.jpg';
+import product3_m from '../../../../assets/shared/mobile/image-zx9-speaker.jpg';
 
 export default function index() {
   const featuresDescription = (
@@ -46,9 +52,21 @@ export default function index() {
   ];
   // In real life, this wouldn't be hardcoded
   const suggestions = [
-    { name: 'XX99 MARK I', src: product1, category: 'headphones' },
-    { name: 'XX59', src: product2, category: 'headphones' },
-    { name: 'ZX9 SPEAKER', src: product3, category: 'speakers' },
+    {
+      name: 'XX99 MARK I',
+      src: { desktop: product1_d, tablet: product1_t, mobile: product1_m },
+      category: 'headphones',
+    },
+    {
+      name: 'XX59',
+      src: { desktop: product2_d, tablet: product2_t, mobile: product2_m },
+      category: 'headphones',
+    },
+    {
+      name: 'ZX9 SPEAKER',
+      src: { desktop: product3_d, tablet: product3_t, mobile: product3_m },
+      category: 'speakers',
+    },
   ];
 
   return (

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function ProductGallery({ img1, img2, img3 }) {
   return (
-    <div className={`${classes.container} u-margin-b-l`}>
+    <div className={`${classes.container} u-margin-b-m`}>
       <div className={`${classes.image} ${classes.img1}`}>
         <Image src={img1} width={445} height={280} />
       </div>

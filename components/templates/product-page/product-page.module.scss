@@ -1,5 +1,11 @@
 @import '../../../styles/config/mixins';
+@import '../../../styles/config/variables';
 
-.product {
-  margin-top: 16rem;
+.container {
+  margin-top: 8rem;
+}
+.button {
+  margin-bottom: 5.6rem;
+  color: $color-neutral-dark-grey;
+  cursor: pointer;
 }

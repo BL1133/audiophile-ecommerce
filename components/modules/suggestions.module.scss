@@ -1,3 +1,5 @@
+@import '../../styles/config/mixins';
+
 .container {
   width: 100%;
 }
@@ -10,6 +12,9 @@
     display: flex;
     gap: 3rem;
     justify-content: space-between;
+    @include respond(tab-port) {
+      gap: 11px;
+    }
   }
   &__title {
     margin-top: 4rem;
