@@ -12,9 +12,11 @@
   margin-bottom: 2.4rem;
   color: $color-primary-orange;
 
-  @include respond(tab-port) {
-    text-align: center;
-    margin: auto;
+  &--centered {
+    @include respond(tab-port) {
+      text-align: center;
+      margin: auto;
+    }
   }
 }
 .title {
@@ -24,10 +26,12 @@
     color: $color-neutral-white;
   }
 
-  @include respond(tab-port) {
-    text-align: center;
-    align-self: center;
-    width: 70%;
+  &--centered {
+    @include respond(tab-port) {
+      text-align: center;
+      align-self: center;
+      width: 70%;
+    }
   }
   @include respond(phone) {
     font-size: 36px;
@@ -36,17 +40,19 @@
   }
 }
 .description {
-  width: 85%;
+  width: 90%;
   margin-bottom: 4rem;
   color: $color-neutral-dark-grey;
 
   &--light {
     color: $color-neutral-white;
   }
-  @include respond(tab-port) {
-    text-align: center;
-    width: 90%;
-    align-self: center;
-    margin-bottom: 2.4rem;
+  &--centered {
+    @include respond(tab-port) {
+      text-align: center;
+      width: 90%;
+      align-self: center;
+      margin-bottom: 2.4rem;
+    }
   }
 }

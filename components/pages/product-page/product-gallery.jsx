@@ -11,7 +11,7 @@ export default function ProductGallery({ img1, img2, img3 }) {
         <Image src={img2} width={445} height={280} />
       </div>
       <div className={`${classes.image} ${classes.img3}`}>
-        <Image src={img3} width={635} height={592} />
+        <Image src={img3} layout="fill" />
       </div>
     </div>
   );

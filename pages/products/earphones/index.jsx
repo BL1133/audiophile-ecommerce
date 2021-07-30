@@ -15,7 +15,12 @@ export default function EarphonesSection() {
     <ProductSection title="Earphones">
       <section className={`${classes.section} u-margin-b-m`}>
         <ProductWrapper>
-          <ImageLoader desktop={yx1d} tablet={yx1t} mobile={yx1m} />
+          <ImageLoader
+            desktop={yx1d}
+            tablet={yx1t}
+            mobile={yx1m}
+            component="product-category"
+          />
           <div className={classes.product}>
             <ProductInfo
               newProduct={true}

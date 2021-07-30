@@ -18,7 +18,12 @@ export default function SpeakersSection() {
     <ProductSection title="Speakers">
       <section className={`${classes.section} u-margin-b-m`}>
         <ProductWrapper>
-          <ImageLoader desktop={ZX9d} tablet={ZX9t} mobile={ZX9m} />
+          <ImageLoader
+            desktop={ZX9d}
+            tablet={ZX9t}
+            mobile={ZX9m}
+            component="product-category"
+          />
           <div className={classes.product}>
             <ProductInfo
               newProduct={true}
@@ -42,7 +47,12 @@ export default function SpeakersSection() {
               <SeeProduct orange={true} url="/products/speakers/zx7" />
             </div>
           </div>
-          <ImageLoader desktop={ZX7d} tablet={ZX7t} mobile={ZX7m} />
+          <ImageLoader
+            desktop={ZX7d}
+            tablet={ZX7t}
+            mobile={ZX7m}
+            component="product-category"
+          />
         </ProductWrapper>
       </section>
     </ProductSection>

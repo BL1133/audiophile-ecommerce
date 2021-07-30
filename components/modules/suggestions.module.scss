@@ -1,6 +1,26 @@
+.container {
+  width: 100%;
+}
 .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__container {
     display: flex;
     gap: 3rem;
+    justify-content: space-between;
   }
+  &__title {
+    margin-top: 4rem;
+    margin-bottom: 3.6rem;
+  }
+  & img {
+    border-radius: 8px;
+  }
+}
+.heading {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 6.3rem;
 }

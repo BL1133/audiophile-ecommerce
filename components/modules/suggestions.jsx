@@ -6,7 +6,7 @@ import SeeProduct from '../elements/buttons/see-product';
 export default function Suggestions({ products }) {
   return (
     <div className={`${classes.container} u-margin-b-l`}>
-      <h3>YOU MAY ALSO LIKE</h3>
+      <h3 className={classes.heading}>YOU MAY ALSO LIKE</h3>
       <div className={classes.product__container}>
         {products.map((product) => {
           const url = `/products/${product.category}/${product.name

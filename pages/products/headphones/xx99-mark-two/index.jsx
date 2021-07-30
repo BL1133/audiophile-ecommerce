@@ -6,10 +6,15 @@ import Suggestions from '../../../../components/modules/suggestions';
 import Product from '../../../../components/pages/product-page/product';
 import ProductInfo from '../../../../components/modules/product-info';
 
+// Product main
+import Desktop from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg';
+import Tablet from '../../../../assets/product-xx99-mark-two-headphones/tablet/image-product.jpg';
+import Mobile from '../../../../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg';
+// Product Gallery
 import img1 from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg';
 import img2 from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg';
 import img3 from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg';
-
+// Suggestions
 import product1 from '../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg';
 import product2 from '../../../../assets/shared/desktop/image-xx59-headphones.jpg';
 import product3 from '../../../../assets/shared/desktop/image-zx9-speaker.jpg';
@@ -52,6 +57,10 @@ export default function index() {
         price="$ 2,999"
         features={featuresDescription}
         included={includedItems}
+        desktop={Desktop}
+        tablet={Tablet}
+        mobile={Mobile}
+        centered={false}
       >
         <ProductInfo
           newProduct={true}

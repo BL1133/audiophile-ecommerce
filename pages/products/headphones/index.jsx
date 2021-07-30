@@ -21,7 +21,12 @@ export default function HeadphonesSection() {
     <ProductSection title="Headphones">
       <section className={`${classes.section} u-margin-b-m`}>
         <ProductWrapper>
-          <ImageLoader desktop={XX99mk2d} tablet={XX99mk2t} mobile={XX99mk2m} />
+          <ImageLoader
+            desktop={XX99mk2d}
+            tablet={XX99mk2t}
+            mobile={XX99mk2m}
+            component="product-category"
+          />
           <div className={classes.product}>
             <ProductInfo
               newProduct={true}
@@ -51,11 +56,21 @@ export default function HeadphonesSection() {
               />
             </div>
           </div>
-          <ImageLoader desktop={XX99mk1d} tablet={XX99mk1t} mobile={XX99mk1m} />
+          <ImageLoader
+            desktop={XX99mk1d}
+            tablet={XX99mk1t}
+            mobile={XX99mk1m}
+            component="product-category"
+          />
         </ProductWrapper>
         {/* --------------------------------- */}
         <ProductWrapper>
-          <ImageLoader desktop={XX59d} tablet={XX59t} mobile={XX59m} />
+          <ImageLoader
+            desktop={XX59d}
+            tablet={XX59t}
+            mobile={XX59m}
+            component="product-category"
+          />
           <div className={classes.product}>
             <ProductInfo
               newProduct={false}

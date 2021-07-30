@@ -18,13 +18,17 @@ export default function ProductInfo({
           New Product
         </p>
       ) : null}
-      <h2 className={`${classes.title} ${light && classes['title--light']} `}>
+      <h2
+        className={`${classes.title} ${light && classes['title--light']} ${
+          centered && classes['title--centered']
+        } `}
+      >
         {title}
       </h2>
       <p
         className={`${classes.description} ${
           light && classes['description--light']
-        }`}
+        } ${centered && classes['description--centered']}`}
       >
         {description}
       </p>

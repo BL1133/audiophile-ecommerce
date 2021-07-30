@@ -1,3 +1,5 @@
+@import '../../../styles/config/mixins';
+
 .container {
   display: grid;
   grid-template-columns: 445px 1fr;
@@ -9,6 +11,13 @@
     'img2 img3';
   height: 59rem;
   width: 100%;
+
+  @include respond(tab-port) {
+    gap: 18px 18px;
+    grid-template-columns: 277px 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 36.8rem;
+  }
 }
 
 .img1,
@@ -25,11 +34,13 @@
 
 .img3 {
   grid-area: img3;
+  position: relative;
+
+  @include respond(tab-port) {
+  }
 
   & img {
     object-fit: cover;
-    width: 100%;
-    max-height: 100%;
   }
 }
 
