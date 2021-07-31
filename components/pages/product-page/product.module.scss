@@ -6,15 +6,36 @@
   width: 50%;
   align-self: center;
 
+  @include respond(tab-port) {
+    margin-left: 6.9rem;
+  }
+  @include respond(phone) {
+    width: initial;
+    margin-left: initial;
+    align-self: initial;
+  }
+
   &__container {
     display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__image {
     width: 50%;
+
+    @include respond(phone) {
+      width: 100%;
+      height: 33rem;
+      position: relative;
+    }
   }
-  @include respond(tab-port) {
-    margin-left: 6.9rem;
+  &__description {
+    @include respond(phone) {
+      margin-top: 3.2rem;
+    }
   }
 }
 .quantity {
@@ -58,6 +79,9 @@
     @include respond(tab-port) {
       margin-left: 30%;
     }
+    @include respond(phone) {
+      margin-left: initial;
+    }
   }
   &__item {
     margin-bottom: 8px;
@@ -72,5 +96,8 @@
   }
   @include respond(tab-port) {
     display: flex;
+  }
+  @include respond(phone) {
+    flex-direction: column;
   }
 }

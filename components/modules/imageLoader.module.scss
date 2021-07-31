@@ -21,4 +21,9 @@
   @include respond(phone) {
     display: initial;
   }
+  & img {
+    @include respond(phone) {
+      object-fit: cover;
+    }
+  }
 }

@@ -24,6 +24,12 @@
 }
 .u-margin-b-m {
   margin-bottom: 16.6rem;
+  @include respond(tab-port) {
+    margin-bottom: 12rem;
+  }
+  @include respond(phone) {
+    margin-bottom: 8.8rem;
+  }
 }
 .u-margin-b-l {
   margin-bottom: 20rem;

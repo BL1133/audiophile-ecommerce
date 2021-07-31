@@ -8,7 +8,7 @@ import Circles from '../../../assets/home/desktop/pattern-circles.svg';
 
 export default function FeaturedProducts() {
   return (
-    <div className={`${classes.container} u-margin-b-l`}>
+    <div className={`${classes.container} u-margin-b-m`}>
       {/* Primary */}
       <div className={`${classes['featured--primary']} u-border-r`}>
         <div className={classes['img-wrapper']}>
