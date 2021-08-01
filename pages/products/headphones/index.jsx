@@ -37,7 +37,7 @@ export default function HeadphonesSection() {
             <div className={classes.button}>
               <SeeProduct
                 orange={true}
-                url="/products/headphones/xx99-mark-two"
+                url="/products/headphones/xx99-mark-ii"
               />
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function HeadphonesSection() {
             <div className={classes.button}>
               <SeeProduct
                 orange={true}
-                url="/products/headphones/xx99-mark-one"
+                url="/products/headphones/xx99-mark-i"
               />
             </div>
           </div>
