@@ -1,0 +1,47 @@
+@import '../../styles/config/mixins';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+
+  & > *:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+.product {
+  height: 16.5rem;
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 9px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-20%);
+  }
+}
+.image-wrapper {
+  width: 40%;
+  min-width: 8rem;
+  max-width: 8rem;
+}
+
+.title {
+  margin-top: 5px;
+  margin-bottom: 1.6rem;
+  font-size: 1.5rem;
+}
+.link {
+  display: flex;
+
+  & > p {
+    margin-right: 12px;
+  }
+
+  & > svg {
+    align-self: center;
+  }
+}

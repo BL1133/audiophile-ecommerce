@@ -5,9 +5,8 @@ import Footer from './footer';
 function Layout(props) {
   return (
     <Fragment>
-      <nav>
-        <MainNavigation />
-      </nav>
+      <MainNavigation />
+
       <main className="u-margin-lr">{props.children}</main>
       <footer className="u-bgc-b">
         <Footer />

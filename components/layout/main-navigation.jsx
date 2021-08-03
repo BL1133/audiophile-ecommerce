@@ -1,13 +1,34 @@
 import Link from 'next/link';
 import classes from './main-navigation.module.scss';
 import Navigation from '../modules/navigation';
+import MobileNav from '../layout/mobile-nav';
+import { useState, setState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 function MainNavigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  }, [router.asPath]);
+
   return (
     <div className={classes.container}>
+      {/* Mobile Navigation */}
+      <nav
+        className={`${classes.nav} ${isMenuOpen === true ? classes.open : ''}`}
+      >
+        <MobileNav />
+      </nav>
       <div className={`u-margin-lr ${classes['header--container']}`}>
         <div className={`${classes.header}`}>
-          <button className={classes.menu}>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={classes.menu}
+          >
             <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
               <g fill="#FFF" fillRule="evenodd">
                 <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
