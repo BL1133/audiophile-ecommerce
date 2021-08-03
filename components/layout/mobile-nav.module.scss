@@ -8,6 +8,14 @@
 
   & > *:not(:last-child) {
     margin-right: 1rem;
+
+    @include respond(phone) {
+      margin-right: initial;
+      margin-bottom: 3rem;
+    }
+  }
+  @include respond(phone) {
+    flex-direction: column;
   }
 }
 .product {
@@ -15,6 +23,10 @@
   width: 100%;
   background-color: #f1f1f1;
   border-radius: 9px;
+
+  @include respond(phone) {
+    height: 12rem;
+  }
 
   &__content {
     display: flex;
@@ -27,12 +39,22 @@
   width: 40%;
   min-width: 8rem;
   max-width: 8rem;
+
+  @include respond(phone) {
+    min-width: 8rem;
+    max-width: 10rem;
+  }
 }
 
 .title {
   margin-top: 5px;
   margin-bottom: 1.6rem;
   font-size: 1.5rem;
+
+  @include respond(phone) {
+    margin-bottom: initial;
+    margin-top: -1.2rem;
+  }
 }
 .link {
   display: flex;

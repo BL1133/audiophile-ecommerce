@@ -6,7 +6,7 @@
   position: relative;
   z-index: 1000000;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     position: sticky;
     top: 0;
   }
@@ -54,6 +54,12 @@
   z-index: 10000;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+
+  @include respond(phone) {
+    height: initial;
+    padding-bottom: 3.5rem;
+    padding-top: 4rem;
+  }
 }
 .open {
   display: flex;

@@ -2,12 +2,14 @@ import Link from 'next/link';
 import classes from './main-navigation.module.scss';
 import Navigation from '../modules/navigation';
 import MobileNav from '../layout/mobile-nav';
-import { useState, setState, useEffect } from 'react';
+import { useState, setState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 
 function MainNavigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  // ref for the dropdown element
+  const dropdown = useRef(null);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -15,11 +17,24 @@ function MainNavigation() {
     }
   }, [router.asPath]);
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    function handleClick(event) {
+      if (dropdown.current && !dropdown.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    }
+    window.addEventListener('click', handleClick);
+
+    return () => window.removeEventListener('click', handleClick);
+  }, [isMenuOpen]);
+
   return (
     <div className={classes.container}>
       {/* Mobile Navigation */}
       <nav
-        className={`${classes.nav} ${isMenuOpen === true ? classes.open : ''}`}
+        ref={dropdown}
+        className={`${classes.nav} ${isMenuOpen && classes.open}`}
       >
         <MobileNav />
       </nav>
