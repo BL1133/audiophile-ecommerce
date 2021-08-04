@@ -1,16 +1,18 @@
-import { Fragment } from 'react';
 import MainNavigation from './main-navigation';
 import Footer from './footer';
+import { useRouter } from 'next/router';
 
 function Layout(props) {
+  const router = useRouter();
+
   return (
-    <Fragment>
+    <div className={router.pathname === '/checkout' && 'checkoutBG'}>
       <MainNavigation />
       <main className="u-margin-lr">{props.children}</main>
       <footer className="u-bgc-b">
         <Footer />
       </footer>
-    </Fragment>
+    </div>
   );
 }
 

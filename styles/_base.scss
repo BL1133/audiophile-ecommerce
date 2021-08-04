@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+@import '../styles/config/variables';
 
 *,
 *::after,
@@ -51,4 +52,7 @@ button {
   background: transparent;
   cursor: pointer;
   text-align: center;
+}
+.checkoutBG {
+  background-color: $color-neutral-grey;
 }

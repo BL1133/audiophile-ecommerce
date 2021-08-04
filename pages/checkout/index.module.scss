@@ -1,0 +1,26 @@
+@import '../../styles/config/variables';
+@import '../../styles/config/mixins';
+
+.section {
+  margin-top: 8rem;
+}
+.container {
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  background-color: $color-neutral-grey;
+}
+.form,
+.summary {
+  border-radius: 7px;
+}
+.form {
+  background-color: white;
+  width: 60%;
+  height: 50rem;
+}
+.summary {
+  background-color: white;
+  height: 41rem;
+  width: 40%;
+}
