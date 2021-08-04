@@ -8,6 +8,7 @@ import Hero from '../components/pages/home-page/hero';
 import ProductsGrid from '../components/modules/products-grid';
 import FeaturedProducts from '../components/pages/home-page/featured-products';
 import CompanyDescription from '../components/modules/company-description';
+import MainNavigation from '../components/layout/main-navigation';
 
 export default function Home() {
   return (

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import classes from './main-navigation.module.scss';
 import Navigation from '../modules/navigation';
 import MobileNav from '../layout/mobile-nav';
-import { useState, setState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 
 function MainNavigation() {
@@ -30,7 +30,11 @@ function MainNavigation() {
   }, [isMenuOpen]);
 
   return (
-    <div className={classes.container}>
+    <div
+      className={`${classes.container} ${
+        router.pathname === '/' && classes.home
+      }`}
+    >
       {/* Mobile Navigation */}
       <nav
         ref={dropdown}

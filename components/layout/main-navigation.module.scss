@@ -3,12 +3,19 @@
 
 .container {
   position: relative;
+  background-color: $color-neutral-black;
+  z-index: 3;
 
   @include respond(tab-port) {
-    background-color: #1a1a1a;
-    z-index: 1000000;
     position: sticky;
     top: 0;
+  }
+}
+.home {
+  background-color: transparent !important;
+
+  @include respond(tab-port) {
+    background-color: $color-neutral-black !important;
   }
 }
 .header {

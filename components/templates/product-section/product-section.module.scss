@@ -9,6 +9,8 @@
   background-color: $color-neutral-black;
   margin: 0 -16.5rem;
   padding: 0 16.5rem;
+  // Fixes line I can't figure out where it comes from
+  transform: translateY(-1px);
 
   @include respond(tab-land) {
     margin: 0 -8rem;

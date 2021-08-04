@@ -6,7 +6,6 @@ function Layout(props) {
   return (
     <Fragment>
       <MainNavigation />
-
       <main className="u-margin-lr">{props.children}</main>
       <footer className="u-bgc-b">
         <Footer />
