@@ -1,0 +1,33 @@
+@import '../../styles/config/variables';
+@import '../../styles/config/mixins';
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+.product {
+  display: flex;
+}
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.6rem;
+
+  & img {
+    border-radius: 8px;
+  }
+}
+.description {
+  align-self: center;
+  margin-right: 6.1rem;
+}
+.price {
+  color: $color-neutral-dark-grey;
+}
+.quantity {
+  align-self: center;
+}
