@@ -17,9 +17,7 @@ export default function CartItems({ summary }) {
           <p className={classes.title}>XX99 MK 11</p>
           <p className={classes.price}>$ 2,999</p>
         </div>
-        <div className={classes.quantity}>
-          <Quantity />
-        </div>
+        <div className={classes.quantity}>{summary ? 'x1' : <Quantity />}</div>
       </div>
       {/* -------------------------------------------- */}
       <div className={classes.product}>
@@ -30,9 +28,7 @@ export default function CartItems({ summary }) {
           <p className={classes.title}>XX99 MK 11</p>
           <p className={classes.price}>$ 2,999</p>
         </div>
-        <div className={classes.quantity}>
-          <Quantity />
-        </div>
+        <div className={classes.quantity}>{summary ? 'x2' : <Quantity />}</div>
       </div>
       {/* -------------------------------------------- */}
       <div className={classes.product}>
@@ -43,9 +39,7 @@ export default function CartItems({ summary }) {
           <p className={classes.title}>XX99 MK 11</p>
           <p className={classes.price}>$ 2,999</p>
         </div>
-        <div className={classes.quantity}>
-          <Quantity />
-        </div>
+        <div className={classes.quantity}>{summary ? 'x1' : <Quantity />}</div>
       </div>
       {/* -------------------------------------------- */}
     </div>

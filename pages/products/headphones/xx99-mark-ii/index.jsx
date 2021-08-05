@@ -10,6 +10,8 @@ import ProductInfo from '../../../../components/modules/product-info';
 import Desktop from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg';
 import Tablet from '../../../../assets/product-xx99-mark-two-headphones/tablet/image-product.jpg';
 import Mobile from '../../../../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg';
+// Product cart
+import cartImg from '../../../../assets/cart/image-xx99-mark-two-headphones.jpg';
 // Product Gallery
 import img1 from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg';
 import img2 from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg';
@@ -72,7 +74,9 @@ export default function index() {
   return (
     <ProductPage>
       <Product
+        product="XX99 MK II"
         price="$ 2,999"
+        cartImg={cartImg}
         features={featuresDescription}
         included={includedItems}
         desktop={Desktop}

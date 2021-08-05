@@ -3,8 +3,22 @@ import classes from './product.module.scss';
 import ImageLoader from '../../modules/imageLoader';
 import AddToCart from '../../elements/buttons/add-to-cart';
 import Quantity from '../../elements/buttons/quantity';
+import { useContext } from 'react';
+import { DispatchContext } from '../../../pages/_app';
 
 export default function Product(props) {
+  const appDispatch = useContext(DispatchContext);
+
+  function handleChange() {
+    appDispatch({
+      type: 'addToCart',
+      value: {
+        product: props.product,
+        price: props.price,
+        cartImg: props.cartImg,
+      },
+    });
+  }
   return (
     <div className={`${classes.container} u-margin-b-s`}>
       <div className={`${classes.product__container} u-margin-b-m`}>
@@ -21,7 +35,7 @@ export default function Product(props) {
           <p className={classes.price}>{props.price}</p>
           <div className={classes.quantity}>
             <Quantity />
-            <AddToCart />
+            <AddToCart handleChange={handleChange} />
           </div>
         </div>
       </div>

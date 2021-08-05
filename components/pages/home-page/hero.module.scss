@@ -21,6 +21,7 @@
     left: 0;
     width: 100%;
     height: 117%;
+    z-index: 0;
 
     @include respond(tab-port) {
       background-image: url('../../../assets/home/tablet/image-header.jpg');
@@ -49,7 +50,7 @@
   }
 }
 .content {
-  z-index: 2;
+  z-index: 0;
 }
 .button {
   @include respond(tab-port) {
