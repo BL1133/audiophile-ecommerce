@@ -9,6 +9,9 @@ export default function CartItems({ summary }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
+  function handleAdd() {}
+  function handleRemove() {}
+
   return (
     <div className={classes.products}>
       {appState.cart.map((product, idx) => {
@@ -22,7 +25,11 @@ export default function CartItems({ summary }) {
               <p className={classes.price}>{product.price}</p>
             </div>
             <div className={classes.quantity}>
-              {summary ? 'x1' : <Quantity />}
+              {summary ? (
+                `${product.quantity}x`
+              ) : (
+                <Quantity handleRemove={handleRemove} handleAdd={handleAdd} />
+              )}
             </div>
           </div>
         );

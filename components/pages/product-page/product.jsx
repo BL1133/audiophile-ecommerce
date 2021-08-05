@@ -1,5 +1,5 @@
 import classes from './product.module.scss';
-
+import { useState } from 'react';
 import ImageLoader from '../../modules/imageLoader';
 import AddToCart from '../../elements/buttons/add-to-cart';
 import Quantity from '../../elements/buttons/quantity';
@@ -8,6 +8,7 @@ import { DispatchContext } from '../../../pages/_app';
 
 export default function Product(props) {
   const appDispatch = useContext(DispatchContext);
+  const [quantity, setQuantity] = useState(1);
 
   function handleChange() {
     appDispatch({
@@ -16,9 +17,20 @@ export default function Product(props) {
         productName: props.productName,
         price: props.price,
         cartImg: props.cartImg,
+        quantity,
       },
     });
+    setQuantity(1);
   }
+  function handleAdd() {
+    setQuantity(quantity + 1);
+  }
+  function handleRemove() {
+    if (quantity !== 1) {
+      setQuantity(quantity - 1);
+    }
+  }
+
   return (
     <div className={`${classes.container} u-margin-b-s`}>
       <div className={`${classes.product__container} u-margin-b-m`}>
@@ -34,7 +46,11 @@ export default function Product(props) {
           <div className={classes.product__description}>{props.children}</div>
           <p className={classes.price}>{props.price}</p>
           <div className={classes.quantity}>
-            <Quantity />
+            <Quantity
+              handleRemove={handleRemove}
+              handleAdd={handleAdd}
+              quantity={quantity}
+            />
             <AddToCart handleChange={handleChange} />
           </div>
         </div>
