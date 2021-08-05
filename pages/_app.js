@@ -22,9 +22,9 @@ function MyApp({ Component, pageProps }) {
         draft.cartOpen = !draft.cartOpen;
         return;
       case 'addToCart':
-        const { product, price, cartImg } = action.value;
+        const { productName, price, cartImg } = action.value;
         draft.cart.push({
-          product,
+          productName,
           price,
           cartImg,
         });
@@ -36,6 +36,7 @@ function MyApp({ Component, pageProps }) {
     }
   }
   const [state, dispatch] = useImmerReducer(Reducer, initialState);
+
   return (
     <StateContext.Provider value={state}>
       <DispatchContext.Provider value={dispatch}>

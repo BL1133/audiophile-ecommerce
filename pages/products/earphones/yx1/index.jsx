@@ -10,6 +10,8 @@ import ProductInfo from '../../../../components/modules/product-info';
 import Desktop from '../../../../assets/product-yx1-earphones/desktop/image-product.jpg';
 import Tablet from '../../../../assets/product-yx1-earphones/tablet/image-product.jpg';
 import Mobile from '../../../../assets/product-yx1-earphones/mobile/image-product.jpg';
+// Cart
+import cartImg from '../../../../assets/cart/image-yx1-earphones.jpg';
 // Product Gallery
 import img1 from '../../../../assets/product-yx1-earphones/desktop/image-gallery-1.jpg';
 import img2 from '../../../../assets/product-yx1-earphones/desktop/image-gallery-2.jpg';
@@ -72,6 +74,8 @@ export default function index() {
   return (
     <ProductPage>
       <Product
+        productName="YX1"
+        cartImg={cartImg}
         price="$ 599"
         features={featuresDescription}
         included={includedItems}

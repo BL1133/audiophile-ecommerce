@@ -10,6 +10,8 @@ import ProductInfo from '../../../../components/modules/product-info';
 import Desktop from '../../../../assets/product-xx59-headphones/desktop/image-product.jpg';
 import Tablet from '../../../../assets/product-xx59-headphones/tablet/image-product.jpg';
 import Mobile from '../../../../assets/product-xx59-headphones/mobile/image-product.jpg';
+// Cart
+import cartImg from '../../../../assets/cart/image-xx59-headphones.jpg';
 // Product Gallery
 import img1 from '../../../../assets/product-xx59-headphones/desktop/image-gallery-1.jpg';
 import img2 from '../../../../assets/product-xx59-headphones/desktop/image-gallery-2.jpg';
@@ -71,6 +73,8 @@ export default function index() {
   return (
     <ProductPage>
       <Product
+        productName="XX59"
+        cartImg={cartImg}
         price="$ 899"
         features={featuresDescription}
         included={includedItems}

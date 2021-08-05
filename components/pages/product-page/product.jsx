@@ -13,7 +13,7 @@ export default function Product(props) {
     appDispatch({
       type: 'addToCart',
       value: {
-        product: props.product,
+        productName: props.productName,
         price: props.price,
         cartImg: props.cartImg,
       },
@@ -47,9 +47,9 @@ export default function Product(props) {
         <div className={classes.included}>
           <h3 className={classes.included__title}>IN THE BOX</h3>
           <ul className={classes.included__list}>
-            {props.included.map((item) => {
+            {props.included.map((item, idx) => {
               return (
-                <li className={classes.included__item}>
+                <li key={idx} className={classes.included__item}>
                   <span className={classes.included__quantity}>
                     {item.quantity}x
                   </span>

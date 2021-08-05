@@ -10,6 +10,8 @@ import ProductInfo from '../../../../components/modules/product-info';
 import Desktop from '../../../../assets/product-zx9-speaker/desktop/image-product.jpg';
 import Tablet from '../../../../assets/product-zx9-speaker/tablet/image-product.jpg';
 import Mobile from '../../../../assets/product-zx9-speaker/mobile/image-product.jpg';
+// Cart
+import cartImg from '../../../../assets/cart/image-zx9-speaker.jpg';
 // Product Gallery
 import img1 from '../../../../assets/product-zx9-speaker/desktop/image-gallery-1.jpg';
 import img2 from '../../../../assets/product-zx9-speaker/desktop/image-gallery-2.jpg';
@@ -72,6 +74,8 @@ export default function index() {
   return (
     <ProductPage>
       <Product
+        productName="ZX9"
+        cartImg={cartImg}
         price="$ 4,500"
         features={featuresDescription}
         included={includedItems}

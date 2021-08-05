@@ -10,6 +10,8 @@ import ProductInfo from '../../../../components/modules/product-info';
 import Desktop from '../../../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg';
 import Tablet from '../../../../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg';
 import Mobile from '../../../../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg';
+// Cart
+import cartImg from '../../../../assets/cart/image-xx99-mark-one-headphones.jpg';
 // Product Gallery
 import img1 from '../../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg';
 import img2 from '../../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg';
@@ -71,6 +73,8 @@ export default function index() {
   return (
     <ProductPage>
       <Product
+        productName="XX99 MK I"
+        cartImg={cartImg}
         price="$ 1,750"
         features={featuresDescription}
         included={includedItems}

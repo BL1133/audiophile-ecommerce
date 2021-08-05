@@ -6,7 +6,7 @@ function Layout(props) {
   const router = useRouter();
 
   return (
-    <div className={router.pathname === '/checkout' && 'checkoutBG'}>
+    <div className={router.pathname === '/checkout' ? 'checkoutBG' : ''}>
       <MainNavigation />
       <main className="u-margin-lr">{props.children}</main>
       <footer className="u-bgc-b">

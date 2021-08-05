@@ -8,13 +8,13 @@ export default function Suggestions({ products }) {
     <div className={`${classes.container} u-margin-b-m`}>
       <h3 className={classes.heading}>YOU MAY ALSO LIKE</h3>
       <div className={classes.product__container}>
-        {products.map((product) => {
+        {products.map((product, idx) => {
           const url = `/products/${product.category}/${product.name
             .replace(/\s+/g, '-')
             .toLowerCase()}`;
 
           return (
-            <div className={classes.product}>
+            <div key={idx} className={classes.product}>
               <ImageLoader
                 desktop={product.src.desktop}
                 tablet={product.src.tablet}

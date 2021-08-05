@@ -1,8 +1,8 @@
 import classes from './cart.module.scss';
 import CartItems from './cart-items';
 import Link from 'next/link';
-import { useContext } from 'react';
 import ReactModal from 'react-modal';
+import { useContext } from 'react';
 import { StateContext } from '../../pages/_app';
 import { DispatchContext } from '../../pages/_app';
 
@@ -21,7 +21,7 @@ export default function Cart({ isOpen }) {
     <ReactModal
       isOpen={isOpen}
       contentLabel={'Cart'}
-      // ariaHideApp={true}
+      ariaHideApp={false}
       className={'cart-modal'}
       shouldCloseOnEsc={true}
       onRequestClose={handleClose}

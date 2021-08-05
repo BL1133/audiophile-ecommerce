@@ -74,7 +74,7 @@ export default function index() {
   return (
     <ProductPage>
       <Product
-        product="XX99 MK II"
+        productName="XX99 MK II"
         price="$ 2,999"
         cartImg={cartImg}
         features={featuresDescription}
