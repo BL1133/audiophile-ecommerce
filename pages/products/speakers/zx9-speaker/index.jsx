@@ -1,5 +1,3 @@
-import classes from './index.module.scss';
-
 import ProductPage from '../../../../components/templates/product-page/product-page';
 import ProductGallery from '../../../../components/pages/product-page/product-gallery';
 import Suggestions from '../../../../components/modules/suggestions';
@@ -28,30 +26,6 @@ import product3_t from '../../../../assets/shared/tablet/image-xx59-headphones.j
 import product3_m from '../../../../assets/shared/mobile/image-xx59-headphones.jpg';
 
 export default function index() {
-  const featuresDescription = (
-    <p>
-      Connect via Bluetooth or nearly any wired source. This speaker features
-      optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs,
-      allowing you to have up to five wired source devices connected for easy
-      switching. Improved bluetooth technology offers near lossless audio
-      quality at up to 328ft (100m).
-      <br />
-      <br />
-      Discover clear, more natural sounding highs than the competition with
-      ZX9’s signature planar diaphragm tweeter. Equally important is its
-      powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit.
-      You’ll be able to enjoy equal sound quality whether in a large room or
-      small den. Furthermore, you will experience new sensations from old songs
-      since it can respond to even the subtle waveforms.
-    </p>
-  );
-  const includedItems = [
-    { quantity: 2, name: 'Speaker Unit' },
-    { quantity: 2, name: 'Speaker cloth panel' },
-    { quantity: 1, name: 'User Manual' },
-    { quantity: 1, name: '3.5mm 5m Audio Cable' },
-    { quantity: 1, name: '10m Optical Cable' },
-  ];
   // In real life, this wouldn't be hardcoded
   const suggestions = [
     {
@@ -73,17 +47,7 @@ export default function index() {
 
   return (
     <ProductPage>
-      <Product
-        productName="ZX9"
-        cartImg={cartImg}
-        price="$ 4,500"
-        features={featuresDescription}
-        included={includedItems}
-        desktop={Desktop}
-        tablet={Tablet}
-        mobile={Mobile}
-        centered={false}
-      >
+      <Product index={5} desktop={Desktop} tablet={Tablet} mobile={Mobile}>
         <ProductInfo
           newProduct={true}
           title="ZX9 SPEAKER"

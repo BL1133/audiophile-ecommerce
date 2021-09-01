@@ -1,5 +1,3 @@
-import classes from './index.module.scss';
-
 import ProductPage from '../../../../components/templates/product-page/product-page';
 import ProductGallery from '../../../../components/pages/product-page/product-gallery';
 import Suggestions from '../../../../components/modules/suggestions';
@@ -28,29 +26,6 @@ import product3_t from '../../../../assets/shared/tablet/image-zx9-speaker.jpg';
 import product3_m from '../../../../assets/shared/mobile/image-zx9-speaker.jpg';
 
 export default function index() {
-  const featuresDescription = (
-    <p>
-      These headphones have been created from durable, high-quality materials
-      tough enough to take anywhere. Its compact folding design fuses comfort
-      and minimalist style making it perfect for travel. Flawless transmission
-      is assured by the latest wireless technology engineered for audio
-      synchronization with videos.
-      <br />
-      <br />
-      More than a simple pair of headphones, this headset features a pair of
-      built-in microphones for clear, hands-free calling when paired with a
-      compatible smartphone. Controlling music and calls is also intuitive
-      thanks to easy-access touch buttons on the earcups. Regardless of how you
-      use the XX59 headphones, you can do so all day thanks to an impressive
-      30-hour battery life that can be rapidly recharged via USB-C.
-    </p>
-  );
-  const includedItems = [
-    { quantity: 1, name: 'Headphone Unit' },
-    { quantity: 2, name: 'Replacement Earcups' },
-    { quantity: 1, name: 'User Manual' },
-    { quantity: 1, name: '3.5mm 5m Audio Cable' },
-  ];
   // In real life, this wouldn't be hardcoded
   const suggestions = [
     {
@@ -72,17 +47,7 @@ export default function index() {
 
   return (
     <ProductPage>
-      <Product
-        productName="XX59"
-        cartImg={cartImg}
-        price="$ 899"
-        features={featuresDescription}
-        included={includedItems}
-        desktop={Desktop}
-        tablet={Tablet}
-        mobile={Mobile}
-        centered={false}
-      >
+      <Product index={1} desktop={Desktop} tablet={Tablet} mobile={Mobile}>
         <ProductInfo
           newProduct={false}
           title="XX59 HEADPHONES"

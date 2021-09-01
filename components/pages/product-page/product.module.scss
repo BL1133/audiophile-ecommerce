@@ -62,6 +62,7 @@
     margin-bottom: 3.2rem;
   }
   &__description {
+    white-space: pre-line;
     color: $color-neutral-dark-grey;
   }
   @include respond(tab-port) {

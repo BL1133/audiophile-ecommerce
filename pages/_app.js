@@ -4,6 +4,7 @@ import '../styles/main.scss';
 
 import { useImmerReducer } from 'use-immer';
 import React, { createContext } from 'react';
+import { data } from '../data';
 
 export const StateContext = createContext();
 export const DispatchContext = createContext();
@@ -11,6 +12,7 @@ export const DispatchContext = createContext();
 function MyApp({ Component, pageProps }) {
   const initialState = {
     cartOpen: false,
+    data,
     cart: [],
   };
 
@@ -20,25 +22,24 @@ function MyApp({ Component, pageProps }) {
         draft.cartOpen = !draft.cartOpen;
         return;
       case 'addToCart':
-        const { productName, price, cartImg, quantity } = action.value;
-        const arr = Array.from({ length: quantity }, (i) => 1);
-        if (quantity === 1) {
-          draft.cart.push({
-            productName,
-            price,
-            cartImg,
-            quantity,
-          });
+        const { productIndex, quantity } = action.value;
+        const product = draft.data[productIndex];
+        const itemIndex = draft.cart.findIndex(
+          (item) => item.id === product.id
+        );
+        const item = draft.cart[itemIndex];
+        // If index does not exist, push to array
+        if (itemIndex !== -1) {
+          item.quantity = item.quantity + quantity;
         } else {
-          for (let i = 0; i < arr.length; i++) {
-            draft.cart.push({
-              productName,
-              price,
-              cartImg,
-              quantity,
-            });
-          }
+          draft.cart.push({
+            quantity,
+            id: product.id,
+            productName: product.name,
+            price: product.price,
+          });
         }
+
         return;
       case 'removeAll':
         draft.cart = [];

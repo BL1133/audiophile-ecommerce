@@ -1,5 +1,3 @@
-import classes from './index.module.scss';
-
 import ProductPage from '../../../../components/templates/product-page/product-page';
 import ProductGallery from '../../../../components/pages/product-page/product-gallery';
 import Suggestions from '../../../../components/modules/suggestions';
@@ -28,29 +26,6 @@ import product3_t from '../../../../assets/shared/tablet/image-zx9-speaker.jpg';
 import product3_m from '../../../../assets/shared/mobile/image-zx9-speaker.jpg';
 
 export default function index() {
-  const featuresDescription = (
-    <p>
-      As the headphones all others are measured against, the XX99 Mark I
-      demonstrates over five decades of audio expertise, redefining the critical
-      listening experience. This pair of closed-back headphones are made of
-      industrial, aerospace-grade materials to emphasize durability at a
-      relatively light weight of 11 oz.
-      <br />
-      <br />
-      From the handcrafted microfiber ear cushions to the robust metal headband
-      with inner damping element, the components work together to deliver
-      comfort and uncompromising sound. Its closed-back design delivers up to 27
-      dB of passive noise cancellation, reducing resonance by reflecting sound
-      to a dedicated absorber. For connectivity, a specially tuned cable is
-      included with a balanced gold connector.
-    </p>
-  );
-  const includedItems = [
-    { quantity: 1, name: 'Headphone Unit' },
-    { quantity: 2, name: 'Replacement Earcups' },
-    { quantity: 1, name: 'User Manual' },
-    { quantity: 1, name: '3.5mm 5m Audio Cable' },
-  ];
   // In real life, this wouldn't be hardcoded
   const suggestions = [
     {
@@ -73,11 +48,7 @@ export default function index() {
   return (
     <ProductPage>
       <Product
-        productName="XX99 MK I"
-        cartImg={cartImg}
-        price="$ 1,750"
-        features={featuresDescription}
-        included={includedItems}
+        index={2}
         desktop={Desktop}
         tablet={Tablet}
         mobile={Mobile}
@@ -85,7 +56,7 @@ export default function index() {
       >
         <ProductInfo
           newProduct={false}
-          title="XX99 MARK II HEADPHONES"
+          title="XX99 MARK I HEADPHONES"
           description="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go. "
           light={false}
           centered={false}

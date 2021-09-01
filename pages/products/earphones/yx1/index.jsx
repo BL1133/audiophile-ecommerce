@@ -1,5 +1,3 @@
-import classes from './index.module.scss';
-
 import ProductPage from '../../../../components/templates/product-page/product-page';
 import ProductGallery from '../../../../components/pages/product-page/product-gallery';
 import Suggestions from '../../../../components/modules/suggestions';
@@ -28,31 +26,6 @@ import product3_t from '../../../../assets/shared/tablet/image-zx9-speaker.jpg';
 import product3_m from '../../../../assets/shared/mobile/image-zx9-speaker.jpg';
 
 export default function index() {
-  const featuresDescription = (
-    <p>
-      Experience unrivalled stereo sound thanks to innovative acoustic
-      technology. With improved ergonomics designed for full day wearing, these
-      revolutionary earphones have been finely crafted to provide you with the
-      perfect fit, delivering complete comfort all day long while enjoying
-      exceptional noise isolation and truly immersive sound.
-      <br />
-      <br />
-      The YX1 Wireless Earphones features customizable controls for volume,
-      music, calls, and voice assistants built into both earbuds. The new 7-hour
-      battery life can be extended up to 28 hours with the charging case, giving
-      you uninterrupted play time. Exquisite craftsmanship with a splash
-      resistant design now available in an all new white and grey color scheme
-      as well as the popular classic black.
-    </p>
-  );
-  const includedItems = [
-    { quantity: 2, name: 'Earphone Unit' },
-    { quantity: 6, name: 'Mult-size Earplugs' },
-    { quantity: 1, name: 'User Manual' },
-    { quantity: 1, name: 'USB-C Charging Cable' },
-    { quantity: 1, name: 'Travel Pouch' },
-  ];
-  // In real life, this wouldn't be hardcoded
   const suggestions = [
     {
       name: 'XX99 MARK I',
@@ -73,17 +46,7 @@ export default function index() {
 
   return (
     <ProductPage>
-      <Product
-        productName="YX1"
-        cartImg={cartImg}
-        price="$ 599"
-        features={featuresDescription}
-        included={includedItems}
-        desktop={Desktop}
-        tablet={Tablet}
-        mobile={Mobile}
-        centered={false}
-      >
+      <Product index={0} desktop={Desktop} tablet={Tablet} mobile={Mobile}>
         <ProductInfo
           newProduct={true}
           title="YX1 WIRELESS EARPHONES"

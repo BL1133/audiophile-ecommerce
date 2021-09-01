@@ -1,5 +1,4 @@
 import classes from './product-page.module.scss';
-import Link from 'next/link';
 import CompanyDescription from '../../modules/company-description';
 import ProductsGrid from '../../modules/products-grid';
 import GoBack from '../../elements/buttons/go-back';

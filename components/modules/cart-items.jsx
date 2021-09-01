@@ -1,6 +1,6 @@
 import classes from './cart-items.module.scss';
 import Image from 'next/image';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { StateContext } from '../../pages/_app';
 import { DispatchContext } from '../../pages/_app';
 import Quantity from '../elements/buttons/quantity';
@@ -18,7 +18,7 @@ export default function CartItems({ summary }) {
         return (
           <div key={idx} className={classes.product}>
             <div className={classes.image}>
-              <Image src={product.cartImg} width={64} height={64} />
+              {/* <Image src={product.cartImg} width={64} height={64} /> */}
             </div>
             <div className={classes.description}>
               <p className={classes.title}>{product.productName}</p>
@@ -28,7 +28,11 @@ export default function CartItems({ summary }) {
               {summary ? (
                 `${product.quantity}x`
               ) : (
-                <Quantity handleRemove={handleRemove} handleAdd={handleAdd} />
+                <Quantity
+                  handleRemove={handleRemove}
+                  handleAdd={handleAdd}
+                  quantity={product.quantity}
+                />
               )}
             </div>
           </div>
