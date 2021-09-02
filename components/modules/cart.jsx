@@ -16,6 +16,10 @@ export default function Cart({ isOpen }) {
   function handleRemoveAll() {
     appDispatch({ type: 'removeAll' });
   }
+  const cartTotal = appState.cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 
   return (
     <ReactModal
@@ -39,7 +43,9 @@ export default function Cart({ isOpen }) {
         <CartItems />
         <div className={classes.total}>
           <p className={classes.total__title}>TOTAL</p>
-          <p className={classes.total__cost}>{}</p>
+          <p className={classes.total__cost}>
+            $ {cartTotal.toLocaleString('en-US')}
+          </p>
         </div>
         <div className={classes.link__wrapper}>
           <Link href="/checkout">

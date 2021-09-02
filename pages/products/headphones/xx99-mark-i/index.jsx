@@ -53,6 +53,7 @@ export default function index() {
         tablet={Tablet}
         mobile={Mobile}
         centered={false}
+        name="XX99 MK I"
       >
         <ProductInfo
           newProduct={false}

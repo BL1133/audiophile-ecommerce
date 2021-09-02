@@ -10,15 +10,17 @@
   z-index: 9000;
   background-color: white;
   border-radius: 8px;
-  min-width: 37rem;
+  min-width: 40rem;
   padding: 3.2rem 3.2rem 3.2rem 3.2rem;
 }
 .header {
   display: flex;
   justify-content: space-between;
 }
+
 .remove_all {
   color: $color-neutral-dark-grey;
+  font-size: 16px;
   text-decoration: underline;
 }
 .total {
@@ -31,7 +33,7 @@
   }
   &__cost {
     font-weight: 700;
-    font-size: 2rem;
+    white-space: nowrap;
   }
 }
 .link {

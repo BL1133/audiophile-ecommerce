@@ -19,6 +19,8 @@ export default function Product(props) {
       value: {
         quantity,
         productIndex: props.index,
+        img: props.mobile,
+        name: props.name,
       },
     });
     setQuantity(1);

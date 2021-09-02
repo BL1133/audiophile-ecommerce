@@ -47,7 +47,13 @@ export default function index() {
 
   return (
     <ProductPage>
-      <Product index={5} desktop={Desktop} tablet={Tablet} mobile={Mobile}>
+      <Product
+        index={5}
+        desktop={Desktop}
+        tablet={Tablet}
+        mobile={Mobile}
+        name="ZX9"
+      >
         <ProductInfo
           newProduct={true}
           title="ZX9 SPEAKER"

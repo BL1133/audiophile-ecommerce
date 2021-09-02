@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         draft.cartOpen = !draft.cartOpen;
         return;
       case 'addToCart':
-        const { productIndex, quantity } = action.value;
+        const { productIndex, quantity, img, name } = action.value;
         const product = draft.data[productIndex];
         const itemIndex = draft.cart.findIndex(
           (item) => item.id === product.id
@@ -34,15 +34,39 @@ function MyApp({ Component, pageProps }) {
         } else {
           draft.cart.push({
             quantity,
+            img,
+            name,
             id: product.id,
             productName: product.name,
             price: product.price,
           });
         }
-
+        return;
+      case 'addQuantity':
+        const indexToAddQuantity = draft.cart.findIndex(
+          (item) => item.id == action.value
+        );
+        const itemToAdd = draft.cart[indexToAddQuantity];
+        itemToAdd.quantity = itemToAdd.quantity + 1;
+        return;
+      case 'decreaseQuantity':
+        const indexToDecreaseQuantity = draft.cart.findIndex(
+          (item) => item.id == action.value
+        );
+        const itemToDecrease = draft.cart[indexToDecreaseQuantity];
+        if (itemToDecrease.quantity === 1) {
+          draft.cart.splice(
+            indexToDecreaseQuantity,
+            indexToDecreaseQuantity + 1
+          );
+        }
+        if (itemToDecrease.quantity > 1) {
+          itemToDecrease.quantity = itemToDecrease.quantity - 1;
+        }
         return;
       case 'removeAll':
         draft.cart = [];
+        return;
       default:
         return draft;
     }

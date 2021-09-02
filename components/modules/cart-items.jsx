@@ -9,8 +9,22 @@ export default function CartItems({ summary }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
-  function handleAdd() {}
-  function handleRemove() {}
+  function handleAdd(e) {
+    const productId = e.currentTarget.value;
+
+    appDispatch({
+      type: 'addQuantity',
+      value: productId,
+    });
+  }
+  function handleRemove(e) {
+    const productId = e.currentTarget.value;
+
+    appDispatch({
+      type: 'decreaseQuantity',
+      value: productId,
+    });
+  }
 
   return (
     <div className={classes.products}>
@@ -18,17 +32,18 @@ export default function CartItems({ summary }) {
         return (
           <div key={idx} className={classes.product}>
             <div className={classes.image}>
-              {/* <Image src={product.cartImg} width={64} height={64} /> */}
+              <Image src={product.img} width={64} height={64} />
             </div>
             <div className={classes.description}>
-              <p className={classes.title}>{product.productName}</p>
-              <p className={classes.price}>{product.price}</p>
+              <p className={classes.title}>{product.name}</p>
+              <p className={classes.price}>$ {product.price}</p>
             </div>
             <div className={classes.quantity}>
               {summary ? (
                 `${product.quantity}x`
               ) : (
                 <Quantity
+                  productId={product.id}
                   handleRemove={handleRemove}
                   handleAdd={handleAdd}
                   quantity={product.quantity}
