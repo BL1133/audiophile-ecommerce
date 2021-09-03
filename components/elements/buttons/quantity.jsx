@@ -8,12 +8,13 @@ export default function Quantity({
   handleAdd,
   quantity,
   productId,
+  cart,
 }) {
   const appDispatch = useContext(DispatchContext);
   const appState = useContext(StateContext);
 
   return (
-    <div className={classes.container}>
+    <div className={`${classes.container}  ${cart ? classes.cart : ''} `}>
       <button
         value={productId}
         onClick={handleRemove}

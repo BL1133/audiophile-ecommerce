@@ -55,10 +55,7 @@ function MyApp({ Component, pageProps }) {
         );
         const itemToDecrease = draft.cart[indexToDecreaseQuantity];
         if (itemToDecrease.quantity === 1) {
-          draft.cart.splice(
-            indexToDecreaseQuantity,
-            indexToDecreaseQuantity + 1
-          );
+          draft.cart.splice(indexToDecreaseQuantity, 1);
         }
         if (itemToDecrease.quantity > 1) {
           itemToDecrease.quantity = itemToDecrease.quantity - 1;

@@ -40,9 +40,10 @@ export default function CartItems({ summary }) {
             </div>
             <div className={classes.quantity}>
               {summary ? (
-                `${product.quantity}x`
+                `x${product.quantity}`
               ) : (
                 <Quantity
+                  cart={true}
                   productId={product.id}
                   handleRemove={handleRemove}
                   handleAdd={handleAdd}

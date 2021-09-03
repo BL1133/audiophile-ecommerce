@@ -8,12 +8,19 @@
   height: 48px;
   background-color: $color-neutral-grey;
 }
+.cart {
+  height: 38px;
+}
 
 .quantity {
-  color: $color-neutral-light-grey;
+  color: rgb(180, 175, 175);
   font-size: 17px;
 }
 .button {
-  width: 100%;
+  width: 33.333%;
   height: 100%;
+}
+.text {
+  width: 33.333%;
+  text-align: center;
 }

@@ -29,6 +29,7 @@ export default function Cart({ isOpen }) {
       className={'cart-modal'}
       shouldCloseOnEsc={true}
       onRequestClose={handleClose}
+      shouldFocusAfterRender={true}
       style={{
         overlay: { backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: '10000' },
       }}
@@ -47,11 +48,13 @@ export default function Cart({ isOpen }) {
             $ {cartTotal.toLocaleString('en-US')}
           </p>
         </div>
-        <div className={classes.link__wrapper}>
-          <Link href="/checkout">
-            <a className={classes.link}>CHECKOUT</a>
-          </Link>
-        </div>
+        <button onClick={handleClose}>
+          <div className={classes.link__wrapper}>
+            <Link href="/checkout">
+              <a className={classes.link}>CHECKOUT</a>
+            </Link>
+          </div>
+        </button>
       </div>
     </ReactModal>
   );
