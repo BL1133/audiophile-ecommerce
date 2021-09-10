@@ -34,28 +34,36 @@ export default function Cart({ isOpen }) {
         overlay: { backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: '10000' },
       }}
     >
-      <div className={classes.container}>
-        <div className={classes.header}>
-          <h6 className={classes.title}>{`CART (${appState.cart.length})`}</h6>
-          <button onClick={handleRemoveAll} className={classes.remove_all}>
-            Remove all
+      {cartTotal > 0 ? (
+        <div className={classes.container}>
+          <div className={classes.header}>
+            <h6
+              className={classes.title}
+            >{`CART (${appState.cart.length})`}</h6>
+            <button onClick={handleRemoveAll} className={classes.remove_all}>
+              Remove all
+            </button>
+          </div>
+          <CartItems />
+          <div className={classes.total}>
+            <p className={classes.total__title}>TOTAL</p>
+            <p className={classes.total__cost}>
+              $ {cartTotal.toLocaleString('en-US')}
+            </p>
+          </div>
+          <button onClick={handleClose}>
+            <div className={classes.link__wrapper}>
+              <Link href="/checkout">
+                <a className={classes.link}>CHECKOUT</a>
+              </Link>
+            </div>
           </button>
         </div>
-        <CartItems />
-        <div className={classes.total}>
-          <p className={classes.total__title}>TOTAL</p>
-          <p className={classes.total__cost}>
-            $ {cartTotal.toLocaleString('en-US')}
-          </p>
+      ) : (
+        <div className={classes.container}>
+          <h6 className={classes.empty}>Your cart is empty.</h6>
         </div>
-        <button onClick={handleClose}>
-          <div className={classes.link__wrapper}>
-            <Link href="/checkout">
-              <a className={classes.link}>CHECKOUT</a>
-            </Link>
-          </div>
-        </button>
-      </div>
+      )}
     </ReactModal>
   );
 }

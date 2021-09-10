@@ -1,0 +1,82 @@
+@import '../../styles/config/variables';
+@import '../../styles/config/mixins';
+
+.container {
+  padding: 5.4rem 4.8rem 5.4rem 4.8rem;
+}
+.checkout {
+  margin-bottom: 4.1rem;
+}
+.sectionTitle {
+  font-size: 1.4rem;
+  color: $color-primary-orange;
+  margin-bottom: 1.6rem;
+}
+.label {
+  font-size: 1.2rem;
+  font-family: helvetica;
+  margin-bottom: 2px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.fullWidth {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+.field {
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 1.7rem 2.2rem 1.7rem 2.2rem;
+
+  &:focus {
+    border: 1px solid $color-primary-orange !important;
+  }
+
+  &::placeholder {
+    color: #cfcfcf;
+  }
+}
+.error {
+  font-size: 1.1rem;
+  color: red;
+  line-height: 13px;
+  position: absolute;
+  top: 105%;
+  left: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 24px 16px;
+  grid-auto-flow: row;
+  margin-bottom: 5.3rem;
+}
+.payment {
+  margin-right: 1.3rem;
+  color: $color-primary-orange;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__label {
+    border: 1px solid #cfcfcf;
+    margin-bottom: 1.6rem;
+    border-radius: 8px;
+    padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: helvetica;
+    white-space: nowrap;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
