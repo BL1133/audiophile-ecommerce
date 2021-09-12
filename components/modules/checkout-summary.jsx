@@ -16,6 +16,12 @@ export default function Summary() {
   const shipping = 29.95;
   const vat = numeral(cartTotal * 0.1).format('0');
   const grandTotal = numeral(cartTotal + shipping).format('0,000.00');
+
+  function handleChange() {
+    appDispatch({ type: 'confirmationToggle' });
+    appDispatch({ type: 'grandTotal', value: grandTotal });
+  }
+
   if (cartTotal > 0) {
     return (
       <div className={classes.container}>
@@ -41,7 +47,7 @@ export default function Summary() {
             <p className={classes.item__price}>$ {grandTotal}</p>
           </div>
         </div>
-        <button className={classes.checkout}>
+        <button onClick={handleChange} className={classes.checkout}>
           <p className={classes.checkout__text}>CONTINUE & PAY</p>
         </button>
       </div>

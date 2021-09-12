@@ -26,14 +26,26 @@
 }
 .price {
   color: $color-neutral-dark-grey;
+  &--confirmation {
+    font-size: 1.3rem;
+  }
 }
 .quantity {
   align-self: center;
   margin-left: auto;
   font-size: 1.6rem;
   font-weight: 500;
+
+  &--confirmation {
+    font-size: 1.4rem;
+    color: $color-neutral-dark-grey;
+  }
 }
 .title {
   font-size: 1.6rem;
   font-weight: 700;
+
+  &--confirmation {
+    font-size: 1.4rem;
+  }
 }

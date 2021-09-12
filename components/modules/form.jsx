@@ -216,7 +216,7 @@ export default function form() {
                 className={classes.field}
                 name="moneypin"
                 type="text"
-                placeholder="United States"
+                placeholder="6891"
               />
               <ErrorMessage
                 component="div"

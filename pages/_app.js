@@ -14,6 +14,8 @@ function MyApp({ Component, pageProps }) {
     cartOpen: false,
     data,
     cart: [],
+    confirmationOpen: false,
+    grandTotal: '',
   };
 
   function Reducer(draft, action) {
@@ -64,6 +66,11 @@ function MyApp({ Component, pageProps }) {
       case 'removeAll':
         draft.cart = [];
         return;
+      case 'confirmationToggle':
+        draft.confirmationOpen = !draft.confirmationOpen;
+        return;
+      case 'grandTotal':
+        draft.grandTotal = action.value;
       default:
         return draft;
     }
