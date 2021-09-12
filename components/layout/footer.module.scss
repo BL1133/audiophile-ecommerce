@@ -80,6 +80,13 @@
     margin-right: 1.6rem;
   }
 }
+.socialIcon {
+  cursor: pointer;
+
+  &:active path {
+    fill: $color-primary-orange;
+  }
+}
 .line {
   position: absolute;
   top: 0;

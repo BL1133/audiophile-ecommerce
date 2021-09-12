@@ -11,7 +11,9 @@ export default function ProductSection(props) {
         <h2 className={classes.title}>{props.title}</h2>
       </header>
       <div className={classes.products}>{props.children}</div>
-      <ProductsGrid />
+      <div className={classes.wrapper}>
+        <ProductsGrid />
+      </div>
       <CompanyDescription />
     </div>
   );

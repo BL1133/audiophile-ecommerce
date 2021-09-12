@@ -8,7 +8,9 @@ export default function ProductPage(props) {
     <div className={`${classes.container} u-margin-b-m`}>
       <GoBack />
       <div className={classes.product}>{props.children}</div>
-      <ProductsGrid />
+      <div className={classes.wrapper}>
+        <ProductsGrid />
+      </div>
       <CompanyDescription />
     </div>
   );

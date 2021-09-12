@@ -27,6 +27,10 @@
   margin-right: 3.2rem;
   text-transform: uppercase;
 
+  &:active {
+    color: $color-primary-orange;
+  }
+
   &--footer {
     @include respond(phone) {
       margin: 0 auto;

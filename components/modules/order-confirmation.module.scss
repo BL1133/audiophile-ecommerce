@@ -67,6 +67,9 @@
 .button {
   width: 100%;
   background-color: $color-primary-orange;
+  &:active {
+    background-color: #fbaf85;
+  }
 }
 .link {
   display: block;

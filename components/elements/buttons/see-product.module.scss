@@ -12,10 +12,16 @@
 }
 .orange {
   background-color: $color-primary-orange;
+  &:active {
+    background-color: #fbaf85;
+  }
 }
 .black {
   color: $color-neutral-white !important;
   background-color: $color-neutral-black;
+  &:active {
+    background-color: #4c4c4c;
+  }
 }
 .clear {
   color: $color-neutral-black;
