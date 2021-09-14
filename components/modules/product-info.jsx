@@ -33,7 +33,7 @@ export default function ProductInfo({
       >
         {description}
       </p>
-      <p className={classes.price}>$ {price}</p>
+      {price && <p className={classes.price}>$ {price}</p>}
     </div>
   );
 }

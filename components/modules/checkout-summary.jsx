@@ -13,8 +13,8 @@ export default function Summary() {
     (total, item) => total + item.price * item.quantity,
     0
   );
-  const shipping = 29.95;
-  const vat = numeral(cartTotal * 0.1).format('0');
+  const shipping = 50;
+  const vat = numeral(cartTotal * 0.2).format('0');
   const grandTotal = numeral(cartTotal + shipping).format('0,000.00');
 
   function handleChange() {
