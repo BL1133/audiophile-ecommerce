@@ -58,6 +58,7 @@ export default function index() {
         <ProductInfo
           newProduct={false}
           title="XX99 MARK I HEADPHONES"
+          price="1750"
           description="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go. "
           light={false}
           centered={false}

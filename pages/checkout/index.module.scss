@@ -2,13 +2,22 @@
 @import '../../styles/config/mixins';
 
 .section {
-  margin-top: 8rem;
+  margin-top: 6rem;
+  margin-bottom: 13.3rem;
+
+  @include respond(phone) {
+    margin-top: 4rem;
+  }
 }
 .container {
   display: flex;
   width: 100%;
   gap: 3rem;
   background-color: $color-neutral-grey;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 .form,
 .summary {
@@ -17,9 +26,17 @@
 .form {
   background-color: white;
   width: 60%;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
 }
 .summary {
   background-color: white;
   width: 40%;
   padding: 3.2rem;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
 }

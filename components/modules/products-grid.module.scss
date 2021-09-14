@@ -36,6 +36,10 @@
     flex-direction: column;
     align-items: center;
     transform: translateY(-30%);
+
+    @include respond(phone) {
+      transform: translateY(-24%);
+    }
   }
 
   @include respond(phone) {
@@ -55,6 +59,7 @@
 
   @include respond(phone) {
     margin-top: -20px;
+    margin-bottom: 1.2rem;
   }
 }
 .link {

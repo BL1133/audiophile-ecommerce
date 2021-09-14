@@ -25,10 +25,11 @@
 
   @include respond(phone) {
     display: initial;
+    // width: 100%;
   }
   & img {
     @include respond(phone) {
-      object-fit: cover;
+      // object-fit: cover !important;
     }
   }
 }

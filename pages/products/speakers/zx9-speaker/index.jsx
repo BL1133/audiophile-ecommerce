@@ -57,6 +57,7 @@ export default function index() {
         <ProductInfo
           newProduct={true}
           title="ZX9 SPEAKER"
+          price="4500"
           description="Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups."
           light={false}
           centered={false}

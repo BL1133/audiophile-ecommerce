@@ -56,6 +56,7 @@ export default function index() {
         <ProductInfo
           newProduct={true}
           title="YX1 WIRELESS EARPHONES"
+          price="599"
           description="Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature."
           light={false}
           centered={false}

@@ -12,6 +12,17 @@
   border-radius: 8px;
   min-width: 40rem;
   padding: 3.2rem 3.2rem 3.2rem 3.2rem;
+
+  @include respond(phone) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: initial;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    min-width: initial;
+    padding: 2.5rem 2.3rem 2.3rem 2.5rem;
+  }
 }
 .header {
   display: flex;

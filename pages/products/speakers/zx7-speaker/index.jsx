@@ -57,6 +57,7 @@ export default function index() {
         <ProductInfo
           newProduct={false}
           title="ZX7 SPEAKER"
+          price="3500"
           description="Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use."
           light={false}
           centered={false}

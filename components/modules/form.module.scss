@@ -3,6 +3,10 @@
 
 .container {
   padding: 5.4rem 4.8rem 5.4rem 4.8rem;
+
+  @include respond(phone) {
+    padding: 2.4rem 3.2rem 2.4rem 3.2rem;
+  }
 }
 .checkout {
   margin-bottom: 4.1rem;
@@ -40,6 +44,9 @@
   &::placeholder {
     color: #cfcfcf;
   }
+  @include respond(phone) {
+    margin-bottom: 2.4rem;
+  }
 }
 .error {
   font-size: 1.1rem;
@@ -56,6 +63,10 @@
   gap: 24px 16px;
   grid-auto-flow: row;
   margin-bottom: 5.3rem;
+
+  @include respond(phone) {
+    display: initial;
+  }
 }
 .payment {
   margin-right: 1.3rem;

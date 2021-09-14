@@ -41,8 +41,8 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
       height: '318',
     },
     mobile: {
-      width: '327',
-      height: '120',
+      width: '427',
+      height: '200',
     },
   };
 
@@ -127,6 +127,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={suggestionsPage.mobile.width}
               height={suggestionsPage.mobile.height}
               loading="lazy"
+              objectFit="cover"
             />
           </div>
         </Fragment>

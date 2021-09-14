@@ -3,6 +3,7 @@ import classes from './product-info.module.scss';
 export default function ProductInfo({
   newProduct,
   title,
+  price,
   description,
   light,
   centered,
@@ -32,6 +33,7 @@ export default function ProductInfo({
       >
         {description}
       </p>
+      <p className={classes.price}>$ {price}</p>
     </div>
   );
 }
