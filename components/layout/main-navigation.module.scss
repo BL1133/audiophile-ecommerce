@@ -29,6 +29,7 @@
   }
   @include respond(phone) {
     justify-content: space-between;
+    padding: 2.6rem 0;
   }
 }
 
