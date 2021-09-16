@@ -22,7 +22,10 @@
     display: flex;
     flex-direction: column;
     height: initial;
-    gap: 2rem;
+
+    & > *:not(:last-child) {
+      margin-bottom: 3rem;
+    }
   }
 }
 

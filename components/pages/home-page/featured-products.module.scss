@@ -116,8 +116,9 @@
       // height: 100%;
     }
     @include respond(phone) {
-      transform: scale(70%) translate(-50%, -50%);
-      top: -2%;
+      // transform: scale(70%) translate(-50%, -50%);
+      // top: -2%;
+      display: none;
     }
   }
 }

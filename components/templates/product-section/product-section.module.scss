@@ -21,6 +21,7 @@
     padding: 0 4rem;
   }
   @include respond(phone) {
+    height: 11rem;
     margin: 0 -2.4rem;
     padding: 0 2.4rem;
   }
@@ -30,6 +31,10 @@
 }
 .products {
   margin-top: 16rem;
+
+  @include respond(phone) {
+    margin-top: 6.4rem;
+  }
 }
 .wrapper {
   margin-top: 18rem;

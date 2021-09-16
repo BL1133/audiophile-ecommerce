@@ -67,7 +67,12 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
             />
           </div>
           <div className={classes.mobile}>
-            <Image src={mobile} layout="fill" loading="lazy" />
+            <Image
+              src={mobile}
+              objectFit="cover"
+              layout="fill"
+              loading="lazy"
+            />
           </div>
         </Fragment>
       );

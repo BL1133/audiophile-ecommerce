@@ -55,6 +55,10 @@
   position: absolute;
   top: 105%;
   left: 0;
+
+  @include respond(phone) {
+    top: 80%;
+  }
 }
 .grid {
   display: grid;

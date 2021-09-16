@@ -40,7 +40,9 @@
 }
 .quantity {
   display: flex;
-  gap: 16px;
+}
+.quantity > :first-child {
+  margin-right: 1.6rem;
 }
 .price {
   font-size: 20px;

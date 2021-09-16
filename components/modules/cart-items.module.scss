@@ -4,9 +4,11 @@
 .products {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
+}
+.product > *:not(:last-child) {
+  margin-bottom: 2.4rem;
 }
 .product {
   display: flex;
