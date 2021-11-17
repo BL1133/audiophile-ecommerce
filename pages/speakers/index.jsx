@@ -1,17 +1,17 @@
 import classes from './index.module.scss';
-import ProductSection from '../../../components/templates/product-section/product-section';
+import ProductSection from '../../components/templates/product-section/product-section';
 
-import ProductInfo from '../../../components/modules/product-info';
-import SeeProduct from '../../../components/elements/buttons/see-product';
-import ProductWrapper from '../../../components/modules/product-wrapper';
-import ImageLoader from '../../../components/modules/imageLoader';
+import ProductInfo from '../../components/modules/product-info';
+import SeeProduct from '../../components/elements/buttons/see-product';
+import ProductWrapper from '../../components/modules/product-wrapper';
+import ImageLoader from '../../components/modules/imageLoader';
 
-import ZX9d from '../../../assets/category-speakers/desktop/image-zx9.jpg';
-import ZX9t from '../../../assets/category-speakers/tablet/image-zx9.jpg';
-import ZX9m from '../../../assets/category-speakers/mobile/image-zx9.jpg';
-import ZX7d from '../../../assets/category-speakers/desktop/image-zx7.jpg';
-import ZX7t from '../../../assets/category-speakers/tablet/image-zx7.jpg';
-import ZX7m from '../../../assets/category-speakers/mobile/image-zx7.jpg';
+import ZX9d from '../../assets/category-speakers/desktop/image-zx9.jpg';
+import ZX9t from '../../assets/category-speakers/tablet/image-zx9.jpg';
+import ZX9m from '../../assets/category-speakers/mobile/image-zx9.jpg';
+import ZX7d from '../../assets/category-speakers/desktop/image-zx7.jpg';
+import ZX7t from '../../assets/category-speakers/tablet/image-zx7.jpg';
+import ZX7m from '../../assets/category-speakers/mobile/image-zx7.jpg';
 
 export default function SpeakersSection() {
   return (

@@ -6,9 +6,9 @@ import SeeProduct from '../../components/elements/buttons/see-product';
 import ProductWrapper from '../../components/modules/product-wrapper';
 import ImageLoader from '../../components/modules/imageLoader';
 
-import yx1d from '../../../assets/category-earphones/desktop/image-yx1-earphones.jpg';
-import yx1t from '../../../assets/category-earphones/tablet/image-yx1-earphones.jpg';
-import yx1m from '../../../assets/category-earphones/mobile/image-yx1-earphones.jpg';
+import yx1d from '../../assets/category-earphones/desktop/image-yx1-earphones.jpg';
+import yx1t from '../../assets/category-earphones/tablet/image-yx1-earphones.jpg';
+import yx1m from '../../assets/category-earphones/mobile/image-yx1-earphones.jpg';
 
 export default function EarphonesSection() {
   return (
