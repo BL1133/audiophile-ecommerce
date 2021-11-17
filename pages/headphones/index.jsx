@@ -1,20 +1,20 @@
 import classes from './index.module.scss';
-import ProductSection from '../../../components/templates/product-section/product-section';
+import ProductSection from '../../components/templates/product-section/product-section';
 
-import ProductInfo from '../../../components/modules/product-info';
-import SeeProduct from '../../../components/elements/buttons/see-product';
-import ProductWrapper from '../../../components/modules/product-wrapper';
-import ImageLoader from '../../../components/modules/imageLoader';
+import ProductInfo from '../../components/modules/product-info';
+import SeeProduct from '../../components/elements/buttons/see-product';
+import ProductWrapper from '../../components/modules/product-wrapper';
+import ImageLoader from '../../components/modules/imageLoader';
 
-import XX99mk2d from '../../../assets/category-headphones/desktop/image-xx99-mark-two.jpg';
-import XX99mk2t from '../../../assets/category-headphones/tablet/image-xx99-mark-two.jpg';
-import XX99mk2m from '../../../assets/category-headphones/mobile/image-xx99-mark-two.jpg';
-import XX99mk1d from '../../../assets/category-headphones/desktop/image-xx99-mark-one.jpg';
-import XX99mk1t from '../../../assets/category-headphones/tablet/image-xx99-mark-one.jpg';
-import XX99mk1m from '../../../assets/category-headphones/mobile/image-xx99-mark-one.jpg';
-import XX59d from '../../../assets/category-headphones/desktop/image-xx59.jpg';
-import XX59t from '../../../assets/category-headphones/tablet/image-xx59.jpg';
-import XX59m from '../../../assets/category-headphones/mobile/image-xx59.jpg';
+import XX99mk2d from '../../assets/category-headphones/desktop/image-xx99-mark-two.jpg';
+import XX99mk2t from '../../assets/category-headphones/tablet/image-xx99-mark-two.jpg';
+import XX99mk2m from '../../assets/category-headphones/mobile/image-xx99-mark-two.jpg';
+import XX99mk1d from '../../assets/category-headphones/desktop/image-xx99-mark-one.jpg';
+import XX99mk1t from '../../assets/category-headphones/tablet/image-xx99-mark-one.jpg';
+import XX99mk1m from '../../assets/category-headphones/mobile/image-xx99-mark-one.jpg';
+import XX59d from '../../assets/category-headphones/desktop/image-xx59.jpg';
+import XX59t from '../../assets/category-headphones/tablet/image-xx59.jpg';
+import XX59m from '../../assets/category-headphones/mobile/image-xx59.jpg';
 
 export default function HeadphonesSection() {
   return (
@@ -35,10 +35,7 @@ export default function HeadphonesSection() {
               description="The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."
             />
             <div className={classes.button}>
-              <SeeProduct
-                orange={true}
-                url="/products/headphones/xx99-mark-ii"
-              />
+              <SeeProduct orange={true} url="/headphones/xx99-mark-ii" />
             </div>
           </div>
         </ProductWrapper>
@@ -52,10 +49,7 @@ export default function HeadphonesSection() {
               description="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
             />
             <div className={classes.button}>
-              <SeeProduct
-                orange={true}
-                url="/products/headphones/xx99-mark-i"
-              />
+              <SeeProduct orange={true} url="/headphones/xx99-mark-i" />
             </div>
           </div>
           <ImageLoader
@@ -81,7 +75,7 @@ export default function HeadphonesSection() {
               description="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/products/headphones/xx59" />
+              <SeeProduct orange={true} url="/headphones/xx59" />
             </div>
           </div>
         </ProductWrapper>

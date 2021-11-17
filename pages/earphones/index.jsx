@@ -1,14 +1,14 @@
 import classes from './index.module.scss';
-import ProductSection from '../../../components/templates/product-section/product-section';
+import ProductSection from '../../components/templates/product-section/product-section';
 
-import ProductInfo from '../../../components/modules/product-info';
-import SeeProduct from '../../../components/elements/buttons/see-product';
-import ProductWrapper from '../../../components/modules/product-wrapper';
-import ImageLoader from '../../../components/modules/imageLoader';
+import ProductInfo from '../../components/modules/product-info';
+import SeeProduct from '../../components/elements/buttons/see-product';
+import ProductWrapper from '../../components/modules/product-wrapper';
+import ImageLoader from '../../components/modules/imageLoader';
 
-import yx1d from '../../../assets/category-earphones/desktop/image-yx1-earphones.jpg';
-import yx1t from '../../../assets/category-earphones/tablet/image-yx1-earphones.jpg';
-import yx1m from '../../../assets/category-earphones/mobile/image-yx1-earphones.jpg';
+import yx1d from '../../assets/category-earphones/desktop/image-yx1-earphones.jpg';
+import yx1t from '../../assets/category-earphones/tablet/image-yx1-earphones.jpg';
+import yx1m from '../../assets/category-earphones/mobile/image-yx1-earphones.jpg';
 
 export default function EarphonesSection() {
   return (
@@ -29,7 +29,7 @@ export default function EarphonesSection() {
               description="Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature."
             />
             <div className={classes.button}>
-              <SeeProduct orange={true} url="/products/earphones/yx1" />
+              <SeeProduct orange={true} url="/earphones/yx1" />
             </div>
           </div>
         </ProductWrapper>

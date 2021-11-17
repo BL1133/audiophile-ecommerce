@@ -1,8 +1,8 @@
-import ProductPage from '../../../../components/templates/product-page/product-page';
-import ProductGallery from '../../../../components/pages/product-page/product-gallery';
-import Suggestions from '../../../../components/modules/suggestions';
-import Product from '../../../../components/pages/product-page/product';
-import ProductInfo from '../../../../components/modules/product-info';
+import ProductPage from '../../../components/templates/product-page/product-page';
+import ProductGallery from '../../../components/pages/product-page/product-gallery';
+import Suggestions from '../../../components/modules/suggestions';
+import Product from '../../../components/pages/product-page/product';
+import ProductInfo from '../../../components/modules/product-info';
 
 // Product main
 import Desktop from '../../../../assets/product-yx1-earphones/desktop/image-product.jpg';

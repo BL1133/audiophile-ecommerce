@@ -10,13 +10,13 @@ export default function Navigation({ layout }) {
             <Link href="/">Home</Link>
           </li>
           <li className={classes.item}>
-            <Link href="/products/headphones">Headphones</Link>
+            <Link href="/headphones">Headphones</Link>
           </li>
           <li className={classes.item}>
-            <Link href="/products/speakers">Speakers</Link>
+            <Link href="/speakers">Speakers</Link>
           </li>
           <li className={classes.item}>
-            <Link href="/products/earphones">Earphones</Link>
+            <Link href="/earphones">Earphones</Link>
           </li>
         </ul>
       </nav>
@@ -29,13 +29,13 @@ export default function Navigation({ layout }) {
             <Link href="/">Home</Link>
           </li>
           <li className={`${classes['item--footer']} ${classes.item}`}>
-            <Link href="/products/headphones">Headphones</Link>
+            <Link href="/headphones">Headphones</Link>
           </li>
           <li className={`${classes['item--footer']} ${classes.item}`}>
-            <Link href="/products/speakers">Speakers</Link>
+            <Link href="/speakers">Speakers</Link>
           </li>
           <li className={`${classes['item--footer']} ${classes.item}`}>
-            <Link href="/products/earphones">Earphones</Link>
+            <Link href="/earphones">Earphones</Link>
           </li>
         </ul>
       </nav>

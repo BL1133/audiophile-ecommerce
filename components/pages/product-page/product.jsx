@@ -1,17 +1,17 @@
 import classes from './product.module.scss';
 import { useState } from 'react';
 import ImageLoader from '../../modules/imageLoader';
+import Image from 'next/image';
 import AddToCart from '../../elements/buttons/add-to-cart';
 import Quantity from '../../elements/buttons/quantity';
 import { useContext } from 'react';
 import { DispatchContext } from '../../../pages/_app';
-import { StateContext } from '../../../pages/_app';
+import data from '../../../data';
 
 export default function Product(props) {
   const appDispatch = useContext(DispatchContext);
-  const appState = useContext(StateContext);
   const [quantity, setQuantity] = useState(1);
-  const product = appState.data[props.index];
+  const product = data[props.index];
 
   function handleChange() {
     appDispatch({
