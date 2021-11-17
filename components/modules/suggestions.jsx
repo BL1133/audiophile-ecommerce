@@ -9,7 +9,7 @@ export default function Suggestions({ products }) {
       <h3 className={classes.heading}>YOU MAY ALSO LIKE</h3>
       <div className={classes.product__container}>
         {products.map((product, idx) => {
-          const url = `/products/${product.category}/${product.name
+          const url = `/${product.category}/${product.name
             .replace(/\s+/g, '-')
             .toLowerCase()}`;
 

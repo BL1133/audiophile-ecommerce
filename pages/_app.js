@@ -4,7 +4,7 @@ import '../styles/main.scss';
 
 import { useImmerReducer } from 'use-immer';
 import React, { createContext } from 'react';
-import { data } from '../data';
+import data from '../data';
 
 export const StateContext = createContext();
 export const DispatchContext = createContext();
@@ -12,7 +12,6 @@ export const DispatchContext = createContext();
 function MyApp({ Component, pageProps }) {
   const initialState = {
     cartOpen: false,
-    data,
     cart: [],
     confirmationOpen: false,
     grandTotal: '',
@@ -25,7 +24,7 @@ function MyApp({ Component, pageProps }) {
         return;
       case 'addToCart':
         const { productIndex, quantity, img, name } = action.value;
-        const product = draft.data[productIndex];
+        const product = data[productIndex];
         const itemIndex = draft.cart.findIndex(
           (item) => item.id === product.id
         );

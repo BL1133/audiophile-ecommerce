@@ -24,7 +24,7 @@ export default function ProductsGrid() {
               />
             </div>
             <h6 className={classes.title}>Headphones</h6>
-            <Link href="/products/headphones">
+            <Link href="/headphones">
               <a className={classes.link}>
                 <p className="subtitle">SHOP</p>
                 <svg width="8" height="12" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ export default function ProductsGrid() {
               />
             </div>
             <h6 className={classes.title}>Speakers</h6>
-            <Link href="/products/speakers">
+            <Link href="/speakers">
               <a className={classes.link}>
                 <p className="subtitle">SHOP</p>
                 <svg width="8" height="12" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ export default function ProductsGrid() {
               />
             </div>
             <h6 className={classes.title}>Earphones</h6>
-            <Link href="/products/earphones">
+            <Link href="/earphones">
               <a className={classes.link}>
                 <p className="subtitle">SHOP</p>
                 <svg width="8" height="12" xmlns="http://www.w3.org/2000/svg">

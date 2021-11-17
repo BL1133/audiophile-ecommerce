@@ -28,14 +28,14 @@ export default function FeaturedProducts() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <SeeProduct black={true} url="/products/speakers/zx9-speaker" />
+          <SeeProduct black={true} url="/speakers/zx9-speaker" />
         </div>
       </div>
       {/* Secondary */}
       <div className={`${classes.secondary} u-border-r`}>
         <div className={classes.secondary__content}>
           <h4>zx7 speaker</h4>
-          <SeeProduct clear={true} url="/products/speakers/zx7-speaker" />
+          <SeeProduct clear={true} url="/speakers/zx7-speaker" />
         </div>
       </div>
       {/* Tertiary */}
@@ -43,7 +43,7 @@ export default function FeaturedProducts() {
         <div className={`${classes.tertiary__img} u-border-r`}></div>
         <div className={`${classes.tertiary__content} u-border-r`}>
           <h4>yx1 earphones</h4>
-          <SeeProduct clear={true} url="/products/earphones/yx1" />
+          <SeeProduct clear={true} url="/earphones/yx1" />
         </div>
       </div>
     </div>
