@@ -4,35 +4,41 @@ import ProductSection from '../../components/templates/product-section/product-s
 import ProductInfo from '../../components/modules/product-info';
 import SeeProduct from '../../components/elements/buttons/see-product';
 import ProductWrapper from '../../components/modules/product-wrapper';
+import data from '../../data.json';
 import ImageLoader from '../../components/modules/imageLoader';
 
-import yx1d from '../../assets/category-earphones/desktop/image-yx1-earphones.jpg';
-import yx1t from '../../assets/category-earphones/tablet/image-yx1-earphones.jpg';
-import yx1m from '../../assets/category-earphones/mobile/image-yx1-earphones.jpg';
-
 export default function EarphonesSection() {
+  const filteredProducts = data.filter(
+    (product) => product.category === 'earphones'
+  );
+
   return (
     <ProductSection title="Earphones">
       <section className={`${classes.section} u-margin-b-m`}>
-        <ProductWrapper>
-          <ImageLoader
-            desktop={yx1d}
-            tablet={yx1t}
-            mobile={yx1m}
-            component="product-category"
-          />
-          <div className={classes.product}>
-            <ProductInfo
-              centered={true}
-              newProduct={true}
-              title="YX1 Wireless Earphones"
-              description="Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature."
+        {filteredProducts.map((product) => (
+          <ProductWrapper key={product.id}>
+            <ImageLoader
+              desktop={`/assets/category-${product.category}/desktop/image-${product.slug}.jpg`}
+              tablet={`/assets/category-${product.category}/tablet/image-${product.slug}.jpg`}
+              mobile={`/assets/category-${product.category}/mobile/image-${product.slug}.jpg`}
+              component="product-category"
             />
-            <div className={classes.button}>
-              <SeeProduct orange={true} url="/earphones/yx1" />
+            <div className={classes.product}>
+              <ProductInfo
+                centered={true}
+                newProduct={true}
+                title={product.name}
+                description={product.description}
+              />
+              <div className={classes.button}>
+                <SeeProduct
+                  orange={true}
+                  url={`/${product.category}/${product.slug}`}
+                />
+              </div>
             </div>
-          </div>
-        </ProductWrapper>
+          </ProductWrapper>
+        ))}
       </section>
     </ProductSection>
   );

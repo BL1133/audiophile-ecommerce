@@ -6,15 +6,15 @@ import SeeProduct from '../../components/elements/buttons/see-product';
 import ProductWrapper from '../../components/modules/product-wrapper';
 import ImageLoader from '../../components/modules/imageLoader';
 
-import XX99mk2d from '../../assets/category-headphones/desktop/image-xx99-mark-two.jpg';
-import XX99mk2t from '../../assets/category-headphones/tablet/image-xx99-mark-two.jpg';
-import XX99mk2m from '../../assets/category-headphones/mobile/image-xx99-mark-two.jpg';
-import XX99mk1d from '../../assets/category-headphones/desktop/image-xx99-mark-one.jpg';
-import XX99mk1t from '../../assets/category-headphones/tablet/image-xx99-mark-one.jpg';
-import XX99mk1m from '../../assets/category-headphones/mobile/image-xx99-mark-one.jpg';
-import XX59d from '../../assets/category-headphones/desktop/image-xx59.jpg';
-import XX59t from '../../assets/category-headphones/tablet/image-xx59.jpg';
-import XX59m from '../../assets/category-headphones/mobile/image-xx59.jpg';
+import XX99mk2d from '../../public/assets/category-headphones/desktop/image-xx99-mark-two.jpg';
+import XX99mk2t from '../../public/assets/category-headphones/tablet/image-xx99-mark-two.jpg';
+import XX99mk2m from '../../public/assets/category-headphones/mobile/image-xx99-mark-two.jpg';
+import XX99mk1d from '../../public/assets/category-headphones/desktop/image-xx99-mark-one.jpg';
+import XX99mk1t from '../../public/assets/category-headphones/tablet/image-xx99-mark-one.jpg';
+import XX99mk1m from '../../public/assets/category-headphones/mobile/image-xx99-mark-one.jpg';
+import XX59d from '../../public/assets/category-headphones/desktop/image-xx59.jpg';
+import XX59t from '../../public/assets/category-headphones/tablet/image-xx59.jpg';
+import XX59m from '../../public/assets/category-headphones/mobile/image-xx59.jpg';
 
 export default function HeadphonesSection() {
   return (

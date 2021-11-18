@@ -3,8 +3,8 @@ import classes from './featured-products.module.scss';
 import Image from 'next/image';
 
 import SeeProduct from '../../elements/buttons/see-product';
-import FeaturedImage from '../../../assets/home/desktop/image-speaker-zx9.png';
-import Circles from '../../../assets/home/desktop/pattern-circles.svg';
+import FeaturedImage from '../../../public/assets/home/desktop/image-speaker-zx9.png';
+import Circles from '../../../public/assets/home/desktop/pattern-circles.svg';
 
 export default function FeaturedProducts() {
   return (

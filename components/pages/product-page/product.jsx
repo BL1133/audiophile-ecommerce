@@ -6,7 +6,7 @@ import AddToCart from '../../elements/buttons/add-to-cart';
 import Quantity from '../../elements/buttons/quantity';
 import { useContext } from 'react';
 import { DispatchContext } from '../../../pages/_app';
-import data from '../../../data';
+import data from '../../../data.json';
 
 export default function Product(props) {
   const appDispatch = useContext(DispatchContext);

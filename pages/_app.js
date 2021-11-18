@@ -4,7 +4,7 @@ import '../styles/main.scss';
 
 import { useImmerReducer } from 'use-immer';
 import React, { createContext } from 'react';
-import data from '../data';
+import data from '../data.json';
 
 export const StateContext = createContext();
 export const DispatchContext = createContext();
