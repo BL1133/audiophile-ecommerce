@@ -6,21 +6,17 @@ import AddToCart from '../../elements/buttons/add-to-cart';
 import Quantity from '../../elements/buttons/quantity';
 import { useContext } from 'react';
 import { DispatchContext } from '../../../pages/_app';
-import data from '../../../data.json';
 
-export default function Product(props) {
+export default function Product({ product, children }) {
   const appDispatch = useContext(DispatchContext);
   const [quantity, setQuantity] = useState(1);
-  const product = data[props.index];
 
   function handleChange() {
     appDispatch({
       type: 'addToCart',
       value: {
         quantity,
-        productIndex: props.index,
-        img: props.mobile,
-        name: props.name,
+        product,
       },
     });
     setQuantity(1);
@@ -39,15 +35,15 @@ export default function Product(props) {
       <div className={`${classes.product__container} u-margin-b-m`}>
         <div className={classes.product__image}>
           <ImageLoader
-            desktop={props.desktop}
-            tablet={props.tablet}
-            mobile={props.mobile}
+            desktop={`/assets/product-${product.slug}-${product.category}/desktop/image-product.jpg`}
+            tablet={`/assets/product-${product.slug}-${product.category}/tablet/image-product.jpg`}
+            mobile={`/assets/product-${product.slug}-${product.category}/mobile/image-product.jpg`}
             component="product"
           />
         </div>
         <div className={classes.product}>
-          <div className={classes.product__description}>{props.children}</div>
-          <p className={classes.price}>{props.price}</p>
+          <div className={classes.product__description}>{children}</div>
+          <p className={classes.price}>${product.price}</p>
           <div className={classes.quantity}>
             <Quantity
               handleRemove={handleRemove}

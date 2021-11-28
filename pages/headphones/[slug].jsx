@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
 }
 export async function getStaticPaths() {
   // Return a list of possible value for slug
-  const paths = getProductsFromCategory('earphones');
+  const paths = getProductsFromCategory('headphones');
 
   return {
     paths,

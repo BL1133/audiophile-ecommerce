@@ -23,8 +23,7 @@ function MyApp({ Component, pageProps }) {
         draft.cartOpen = !draft.cartOpen;
         return;
       case 'addToCart':
-        const { productIndex, quantity, img, name } = action.value;
-        const product = data[productIndex];
+        const { product, quantity } = action.value;
         const itemIndex = draft.cart.findIndex(
           (item) => item.id === product.id
         );
@@ -35,10 +34,9 @@ function MyApp({ Component, pageProps }) {
         } else {
           draft.cart.push({
             quantity,
-            img,
-            name,
+            img: `/assets/cart/image-${product.slug}.jpg`,
+            name: product.cartName,
             id: product.id,
-            productName: product.name,
             price: product.price,
           });
         }
