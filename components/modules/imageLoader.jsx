@@ -56,6 +56,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={productPage.desktop.width}
               height={productPage.desktop.height}
               loading="lazy"
+              alt="product image"
             />
           </div>
           <div className={classes.tablet}>
@@ -64,6 +65,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={productPage.tablet.width}
               height={productPage.tablet.height}
               loading="lazy"
+              alt="product image"
             />
           </div>
           <div className={classes.mobile}>
@@ -72,6 +74,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               objectFit="cover"
               layout="fill"
               loading="lazy"
+              alt="product image"
             />
           </div>
         </Fragment>
@@ -86,6 +89,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={categoryPage.desktop.width}
               height={categoryPage.desktop.height}
               loading="lazy"
+              alt="product image"
             />
           </div>
           <div className={classes.tablet}>
@@ -94,6 +98,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={categoryPage.tablet.width}
               height={categoryPage.tablet.height}
               loading="lazy"
+              alt="product image"
             />
           </div>
           <div className={classes.mobile}>
@@ -102,6 +107,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={categoryPage.mobile.width}
               height={categoryPage.mobile.height}
               loading="lazy"
+              alt="product image"
             />
           </div>
         </Fragment>
@@ -116,6 +122,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={suggestionsPage.desktop.width}
               height={suggestionsPage.desktop.height}
               loading="lazy"
+              alt="product image"
             />
           </div>
           <div className={classes.tablet}>
@@ -124,6 +131,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               width={suggestionsPage.tablet.width}
               height={suggestionsPage.tablet.height}
               loading="lazy"
+              alt="product image"
             />
           </div>
           <div className={classes.mobile}>
@@ -133,6 +141,7 @@ export default function ImageLoader({ desktop, tablet, mobile, component }) {
               height={suggestionsPage.mobile.height}
               loading="lazy"
               objectFit="cover"
+              alt="product image"
             />
           </div>
         </Fragment>

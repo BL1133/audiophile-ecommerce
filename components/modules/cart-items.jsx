@@ -34,7 +34,7 @@ export default function CartItems({ summary, orderConfirmation }) {
     return (
       <div className={classes.product}>
         <div className={classes.image}>
-          <Image src={product.img} width={39} height={41} />
+          <Image src={product.img} width={39} height={41} alt="cart image" />
         </div>
         <div className={classes.description}>
           <p className={classes['title--confirmation']}>{product.name}</p>
@@ -54,7 +54,12 @@ export default function CartItems({ summary, orderConfirmation }) {
           return (
             <div key={idx} className={classes.product}>
               <div className={classes.image}>
-                <Image src={product.img} width={64} height={64} />
+                <Image
+                  src={product.img}
+                  width={64}
+                  height={64}
+                  alt="cart image"
+                />
               </div>
               <div className={classes.description}>
                 <p className={classes.title}>{product.name}</p>

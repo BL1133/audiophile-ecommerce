@@ -17,6 +17,7 @@ export default function FeaturedProducts() {
             className={classes.img}
             src={FeaturedImage}
             layout="responsive"
+            alt="product image"
           />
         </div>
         <div className={classes['featured--primary__content']}>
