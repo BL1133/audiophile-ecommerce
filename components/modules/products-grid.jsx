@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import classes from './products-grid.module.scss';
 
-import Headphones from '../../assets/shared/desktop/image-headphones.png';
-import Earphones from '../../assets/shared/desktop/image-earphones.png';
-import Speakers from '../../assets/shared/desktop/image-speakers.png';
-import Arrow from '../../assets/shared/desktop/icon-arrow-right.svg';
+import Headphones from '../../public/assets/shared/desktop/image-headphones.png';
+import Earphones from '../../public/assets/shared/desktop/image-earphones.png';
+import Speakers from '../../public/assets/shared/desktop/image-speakers.png';
+import Arrow from '../../public/assets/shared/desktop/icon-arrow-right.svg';
 
 export default function ProductsGrid() {
   return (

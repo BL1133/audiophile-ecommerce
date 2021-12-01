@@ -27,7 +27,15 @@
 }
 
 .reverse {
-  @include respond(tab-port) {
-    flex-direction: column-reverse;
+  & > :first-child {
+    margin-right: initial;
+    margin-left: 12.5rem;
+
+    @include respond(tab-port) {
+      margin-right: initial;
+    }
+  }
+  @media only screen and (min-width: 56.25em) {
+    flex-direction: row-reverse;
   }
 }

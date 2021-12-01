@@ -3,25 +3,24 @@ import ImageLoader from '../../components/modules/imageLoader';
 
 import SeeProduct from '../elements/buttons/see-product';
 
-export default function Suggestions({ products }) {
+export default function Suggestions({ product }) {
+  const suggestions = product.others;
   return (
     <div className={`${classes.container} u-margin-b-m`}>
       <h3 className={classes.heading}>YOU MAY ALSO LIKE</h3>
       <div className={classes.product__container}>
-        {products.map((product, idx) => {
-          const url = `/${product.category}/${product.name
-            .replace(/\s+/g, '-')
-            .toLowerCase()}`;
+        {suggestions.map((item, idx) => {
+          const url = `/${item.category}/${item.slug}`;
 
           return (
             <div key={idx} className={classes.product}>
               <ImageLoader
-                desktop={product.src.desktop}
-                tablet={product.src.tablet}
-                mobile={product.src.mobile}
+                desktop={item.image.desktop}
+                tablet={item.image.tablet}
+                mobile={item.image.mobile}
                 component="suggestions"
               />
-              <h4 className={classes.product__title}>{product.name}</h4>
+              <h4 className={classes.product__title}>{item.name}</h4>
               <SeeProduct url={url} orange={true} />
             </div>
           );

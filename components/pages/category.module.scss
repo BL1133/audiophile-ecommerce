@@ -1,0 +1,17 @@
+@import '../../styles/config/mixins';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  @include respond(tab-port) {
+    width: initial;
+  }
+}
+
+.button {
+  @include respond(tab-port) {
+    align-self: center;
+  }
+}

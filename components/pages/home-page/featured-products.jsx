@@ -3,8 +3,8 @@ import classes from './featured-products.module.scss';
 import Image from 'next/image';
 
 import SeeProduct from '../../elements/buttons/see-product';
-import FeaturedImage from '../../../assets/home/desktop/image-speaker-zx9.png';
-import Circles from '../../../assets/home/desktop/pattern-circles.svg';
+import FeaturedImage from '../../../public/assets/home/desktop/image-speaker-zx9.png';
+import Circles from '../../../public/assets/home/desktop/pattern-circles.svg';
 
 export default function FeaturedProducts() {
   return (
@@ -17,6 +17,7 @@ export default function FeaturedProducts() {
             className={classes.img}
             src={FeaturedImage}
             layout="responsive"
+            alt="product image"
           />
         </div>
         <div className={classes['featured--primary__content']}>
@@ -28,14 +29,14 @@ export default function FeaturedProducts() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <SeeProduct black={true} url="/speakers/zx9-speaker" />
+          <SeeProduct black={true} url="/speakers/zx9" />
         </div>
       </div>
       {/* Secondary */}
       <div className={`${classes.secondary} u-border-r`}>
         <div className={classes.secondary__content}>
           <h4>zx7 speaker</h4>
-          <SeeProduct clear={true} url="/speakers/zx7-speaker" />
+          <SeeProduct clear={true} url="/speakers/zx7" />
         </div>
       </div>
       {/* Tertiary */}
