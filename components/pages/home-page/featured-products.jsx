@@ -29,14 +29,14 @@ export default function FeaturedProducts() {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <SeeProduct black={true} url="/speakers/zx9-speaker" />
+          <SeeProduct black={true} url="/speakers/zx9" />
         </div>
       </div>
       {/* Secondary */}
       <div className={`${classes.secondary} u-border-r`}>
         <div className={classes.secondary__content}>
           <h4>zx7 speaker</h4>
-          <SeeProduct clear={true} url="/speakers/zx7-speaker" />
+          <SeeProduct clear={true} url="/speakers/zx7" />
         </div>
       </div>
       {/* Tertiary */}

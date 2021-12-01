@@ -16,7 +16,7 @@ function Hero() {
             centered={true}
           />
           <div className={classes.button}>
-            <SeeProduct orange={true} url="/headphones/xx99-mark-ii" />
+            <SeeProduct orange={true} url="/headphones/xx99-mark-two" />
           </div>
         </div>
       </div>
