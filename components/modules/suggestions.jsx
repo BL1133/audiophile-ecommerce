@@ -15,9 +15,9 @@ export default function Suggestions({ product }) {
           return (
             <div key={idx} className={classes.product}>
               <ImageLoader
-                desktop={`/assets/shared/desktop/image-${item.slug}.jpg`}
-                tablet={`/assets/shared/tablet/image-${item.slug}.jpg`}
-                mobile={`/assets/shared/mobile/image-${item.slug}.jpg`}
+                desktop={item.image.desktop}
+                tablet={item.image.tablet}
+                mobile={item.image.mobile}
                 component="suggestions"
               />
               <h4 className={classes.product__title}>{item.name}</h4>
