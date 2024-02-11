@@ -19,7 +19,7 @@ function MainNavigation() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
-  }, [router.asPath]);
+  }, [router.asPath, isMenuOpen]);
 
   // Click on window will close Nav
   useEffect(() => {
